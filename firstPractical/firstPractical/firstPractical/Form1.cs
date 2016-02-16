@@ -15,7 +15,6 @@ namespace firstPractical
         public Form1()
         {
             InitializeComponent();
-            TwoToOne();
         }
 
         public void TwoToOne()
@@ -32,7 +31,8 @@ namespace firstPractical
             for (int r = 0; r < rowCount; r++)
             {
                 //Add code here. DO NOT declare any new variables
-                oneDimensional[c + r] = twoDimensional[c, r];
+
+                oneDimensional[r + (c + c)] = twoDimensional[c, r];        
             }
 
         //printing one dimensional array
