@@ -20,19 +20,19 @@ namespace firstPractical
         public void TwoToOne()
         {
         const int columnCount = 4;
-        const int rowCount = 2;
+        const int rowCount = 3;
 
 	    Char[] oneDimensional = new Char[columnCount * rowCount];
-        Char[,] twoDimensional = new Char[columnCount, rowCount] 
-          { { 'a', 'b' }, { 'c', 'd' }, { 'e', 'f' }, { 'g', 'h' } };
+        //Char[,] twoDimensional = new Char[columnCount, rowCount] { { 'a', 'b' }, { 'c', 'd' }, { 'e', 'f' }, { 'g', 'h' } };
+        Char[,] twoDimensional = new Char[columnCount, rowCount] { { 'a', 'b', 'c' }, { 'd', 'e', 'f' }, { 'g', 'h', 'i'}, { 'j', 'k' , 'l'} };
 
         // convert to one dimension
         for (int c = 0; c < columnCount; c++)
             for (int r = 0; r < rowCount; r++)
             {
                 //Add code here. DO NOT declare any new variables
-
-                oneDimensional[r + (c + c)] = twoDimensional[c, r];        
+                
+                oneDimensional[r + (c * rowCount)] = twoDimensional[c, r];        
             }
 
         //printing one dimensional array
