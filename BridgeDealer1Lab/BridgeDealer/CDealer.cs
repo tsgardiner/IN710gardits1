@@ -50,12 +50,9 @@ namespace BridgeDealer
             String[] hearts     = new String[playerCount];
             String[] diamonds   = new String[playerCount];
             String[] clubs      = new String[playerCount];
-            //String[] clubs    = {"C:\t"}; // \t adds tab.
+            int enumIndexValue;
 
-            String[] cardNames = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K" }; 
-            
-            cards.ShuffledHands(playerHands);
-
+            cards.ShuffledHands(playerHands);  
             lb.Items.Clear();
 
             for (int i = 0; i < playerHands.Length; i++)
@@ -70,16 +67,20 @@ namespace BridgeDealer
 			       switch (playerHands[i].Hand[j].Suit) //ace, king, queen and jack are the only cards worth high card points.
                     {
                     case SuitValue.SPADES:
-                        spades[i] += playerHands[i].Hand[j].Number;
+                        enumIndexValue = (int) playerHands[i].Hand[j].Number;                         
+                        spades[i] += cardValueChange(enumIndexValue);
                         break;
-                    case SuitValue.HEARTS: 
-                        hearts[i] += playerHands[i].Hand[j].Number;
+                    case SuitValue.HEARTS:
+                        enumIndexValue = (int)playerHands[i].Hand[j].Number;
+                        hearts[i] += cardValueChange(enumIndexValue);
                         break;
                     case SuitValue.DIAMONDS:
-                        diamonds[i] += playerHands[i].Hand[j].Number;
+                        enumIndexValue = (int)playerHands[i].Hand[j].Number;
+                        diamonds[i] += cardValueChange(enumIndexValue);
                         break;
-                    case SuitValue.CLUBS: 
-                        clubs[i] += playerHands[i].Hand[j].Number;
+                    case SuitValue.CLUBS:
+                        enumIndexValue = (int)playerHands[i].Hand[j].Number;
+                        clubs[i] += cardValueChange(enumIndexValue);
                         break;
                 }                  
 
@@ -92,10 +93,15 @@ namespace BridgeDealer
                 lb.Items.Add("HCP: " + playerHands[i].TotalPoints().ToString()); //outputs the playerHands high card point score.
                 lb.Items.Add("-----------");
                 lb.Items.Add("");
-            }
+            } 
+        }
 
+        //Takes current enum location and returns a string.
+        public String cardValueChange(int eLocation)
+        {
+            String[] cardNames = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K" };
 
-
+            return cardNames[eLocation];            
         }
     }
 }
