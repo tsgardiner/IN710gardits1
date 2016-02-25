@@ -56,16 +56,17 @@ namespace TestVS2015
                         cardCount++;
                     }
                 }
-                currentHand.ComputeHCP();
-
-                //Sort hand before adding
+                currentHand.ComputeHCP();            
+    
+                //Sorts current hand by suit and rank
                 currentHand.SortHand();
 
-                dealtHands.Add(currentHand);
-
-              
-
+                dealtHands.Add(currentHand); 
             } // all hands dealt
+
+            //Sorts all hands by the highest points
+            dealtHands.Sort();
+
             return dealtHands;
         } // end Deal
 
