@@ -29,6 +29,7 @@ namespace TestVS2015
         public List<Hand> Deal(int handCount, int handLength)
         {
             // What error checking is missing here?
+            //If handCount and handLength are possible, eg not over 52.
 
             List<Hand> dealtHands = new List<Hand>();
 
@@ -56,10 +57,18 @@ namespace TestVS2015
                     }
                 }
                 currentHand.ComputeHCP();
+
+                //Sort hand before adding
+                currentHand.SortHand();
+
                 dealtHands.Add(currentHand);
+
+              
+
             } // all hands dealt
             return dealtHands;
         } // end Deal
+
 
     }
 }
