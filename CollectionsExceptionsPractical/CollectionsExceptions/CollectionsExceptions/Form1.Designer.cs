@@ -188,7 +188,7 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.btnDisplayAll);
             this.panel3.Controls.Add(this.checkBox1);
