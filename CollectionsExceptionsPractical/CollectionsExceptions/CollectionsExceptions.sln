@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsExceptions", "CollectionsExceptions\CollectionsExceptions.csproj", "{AA3732B3-411A-44B9-AC35-A7EB7F63F812}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA3732B3-411A-44B9-AC35-A7EB7F63F812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3732B3-411A-44B9-AC35-A7EB7F63F812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3732B3-411A-44B9-AC35-A7EB7F63F812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3732B3-411A-44B9-AC35-A7EB7F63F812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
