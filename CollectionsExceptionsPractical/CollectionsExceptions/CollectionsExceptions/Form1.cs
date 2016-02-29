@@ -43,7 +43,7 @@ namespace CollectionsExceptions
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-             
+            deleteMovie.DeleteSearchedMovie();
         }
 
         private void btnDisplayAll_Click(object sender, EventArgs e)

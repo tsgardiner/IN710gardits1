@@ -29,18 +29,22 @@ namespace CollectionsExceptions
                 year = int.Parse(addYear.Text);
                 title = addTitle.Text;
                 director = addDirector.Text; 
-
-                if (!movieTable.ContainsKey(year))
-                {
-                    Movie addMovieEntry = new Movie(year, title, director);
-                    movieTable.Add(addMovieEntry.Year, addMovieEntry);
-                    MessageBox.Show("Movie entry successfully added.");
-                    DisplayMovies.DisplayAddedMovie();
-                    ClearAddFields();
-                }
+                if ((year.ToString() != "") && (title != "") && (director != ""))
+                    if (!movieTable.ContainsKey(year))
+                    {
+                        Movie addMovieEntry = new Movie(year, title, director);
+                        movieTable.Add(addMovieEntry.Year, addMovieEntry);
+                        MessageBox.Show("Movie entry successfully added.");
+                        DisplayMovies.DisplayAddedMovie();
+                        ClearAddFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("A movie from this year already exists.");
+                        ClearAddFields();
+                    }
                 else
-                    MessageBox.Show("A movie from this year already exists.");
-                    ClearAddFields();
+                    MessageBox.Show("All fields are required.");
             }
             catch (FormatException)
             {

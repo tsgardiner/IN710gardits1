@@ -17,7 +17,17 @@ namespace CollectionsExceptions
 
         public void DeleteSearchedMovie()
         {
-            
-        }
+            DialogResult deleteConfirm = MessageBox.Show(
+                "Are you sure you want to delete this movie?",
+                "Delete Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+            if (deleteConfirm == DialogResult.Yes)
+            {
+                movieTable.Remove(SearchMovies.searchedMovie.Year);
+                MessageBox.Show("Movie deleted successfully.");
+                DisplayMovies.ClearLbDisplay();
+            }
+         } // End of Delete
     }
 }

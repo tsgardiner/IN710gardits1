@@ -9,6 +9,7 @@ namespace CollectionsExceptions
 {
     class SearchMovies
     {
+        public static Movie searchedMovie;
         TextBox tbSearchYear;
         Dictionary<int, Movie> movieTable;
 
@@ -20,8 +21,7 @@ namespace CollectionsExceptions
 
         public void SearchByYear()
         {
-            DisplayMovies.ClearLbDisplay();
-            Movie searchedMovie;
+            DisplayMovies.ClearLbDisplay();             
             try
             {                  
                 int searchedYear = Convert.ToInt16(tbSearchYear.Text);
