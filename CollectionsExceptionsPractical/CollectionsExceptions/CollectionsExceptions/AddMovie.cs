@@ -11,12 +11,14 @@ namespace CollectionsExceptions
     {
         TextBox addYear, addTitle, addDirector;
         String year, title, director;
+        Dictionary<int, Movie> movieTable;
 
-        public void AddMoive(TextBox addYear, TextBox addTitle, TextBox addDirector)
+        public AddMovie(TextBox addYear, TextBox addTitle, TextBox addDirector, Dictionary<int, Movie> movieTable)
         {
             this.addYear = addYear;
             this.addTitle = addTitle;
             this.addDirector = addDirector;
+            this.movieTable = movieTable;
         }
 
         public void AddMoiveToTable()

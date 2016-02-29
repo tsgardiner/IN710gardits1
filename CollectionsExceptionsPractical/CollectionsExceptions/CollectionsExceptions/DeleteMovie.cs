@@ -8,5 +8,9 @@ namespace CollectionsExceptions
 {
     class DeleteMovie
     {
+        public DeleteMovie()
+        {
+
+        }
     }
 }

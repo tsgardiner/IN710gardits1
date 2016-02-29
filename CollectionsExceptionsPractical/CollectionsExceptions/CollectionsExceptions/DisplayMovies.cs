@@ -10,23 +10,29 @@ namespace CollectionsExceptions
     class DisplayMovies
     {
         ListBox lbDisplay;
+        Dictionary<int, Movie> moviesTable;
+        
 
-        public DisplayMovies(ListBox lbDisplay)
+        public DisplayMovies(ListBox lbDisplay, Dictionary<int, Movie> moviesTable)
         {
             this.lbDisplay = lbDisplay;
+            this.moviesTable = moviesTable;
         }
 
-        public void  DisplayAll(Dictionary<int ,Movie> movies)
+        public void  DisplayAll()
+        {
+            foreach (KeyValuePair<int, Movie> currentMovie in moviesTable)
+            {
+                
+            }
+        }
+
+        public void DisplaySearch()
         {
 
         }
 
-        public void DisplaySearch(Dictionary<int, Movie> searchedMovie)
-        {
-
-        }
-
-        public void DisplayAddedMovie(Dictionary<int , Movie> addedMovie)
+        public void DisplayAddedMovie()
         {
 
         }

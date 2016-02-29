@@ -8,9 +8,16 @@ namespace CollectionsExceptions
 {
     class MovieDictionaryInit
     {
+        Dictionary<int, Movie> movieTable = new Dictionary<int, Movie>();
+        public Dictionary<int, Movie> MovieTable { get; set; }
+
         public MovieDictionaryInit()
         {
-        Dictionary<int, Movie> movieTable = new Dictionary<int, Movie>();
+            createMovieTable();
+        }
+
+        public void createMovieTable()
+        {                                                                      
 
         Movie movie1 = new Movie(1961, "West SideStory", "Jerome Robbins");
         Movie movie2 = new Movie(1972, "The Godfather", "Francis Ford Coppola");

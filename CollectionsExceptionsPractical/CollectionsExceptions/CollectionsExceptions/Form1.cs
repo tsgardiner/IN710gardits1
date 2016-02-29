@@ -15,9 +15,11 @@ namespace CollectionsExceptions
         
         public Form1()
         {
-            InitializeComponent();
-
-
+            InitializeComponent();  
+            
+            MovieDictionaryInit movieTable = new MovieDictionaryInit();
+            AddMovie addMovie = new AddMovie(tbAddYear, tbAddTitle, tbAddDirector, movieTable.MovieTable);
+            DisplayMovies displayMovie = new DisplayMovies(lbDisplay, movieTable.MovieTable);
         }
 
         private void btnAddMovie_Click(object sender, EventArgs e)
