@@ -43,7 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnClearAll = new System.Windows.Forms.Button();
             this.btnDisplayAll = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tbSearchYear = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             // 
             // btnAddMovie
             // 
-            this.btnAddMovie.Location = new System.Drawing.Point(524, 68);
+            this.btnAddMovie.Location = new System.Drawing.Point(524, 95);
             this.btnAddMovie.Name = "btnAddMovie";
             this.btnAddMovie.Size = new System.Drawing.Size(101, 67);
             this.btnAddMovie.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(30, 269);
+            this.btnDelete.Location = new System.Drawing.Point(58, 239);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 66);
             this.btnDelete.TabIndex = 1;
@@ -106,7 +106,7 @@
             this.tbAddYear.Location = new System.Drawing.Point(94, 46);
             this.tbAddYear.MaxLength = 4;
             this.tbAddYear.Name = "tbAddYear";
-            this.tbAddYear.Size = new System.Drawing.Size(101, 22);
+            this.tbAddYear.Size = new System.Drawing.Size(67, 22);
             this.tbAddYear.TabIndex = 5;
             // 
             // tbAddTitle
@@ -180,7 +180,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(30, 121);
+            this.btnSearch.Location = new System.Drawing.Point(58, 96);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(101, 66);
             this.btnSearch.TabIndex = 10;
@@ -191,7 +191,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.btnClearAll);
             this.panel3.Controls.Add(this.btnDisplayAll);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.tbSearchYear);
@@ -204,18 +204,19 @@
             this.panel3.Size = new System.Drawing.Size(205, 596);
             this.panel3.TabIndex = 11;
             // 
-            // label9
+            // btnClearAll
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 384);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 17);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Display all Movies:";
+            this.btnClearAll.Location = new System.Drawing.Point(58, 516);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(103, 63);
+            this.btnClearAll.TabIndex = 17;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // btnDisplayAll
             // 
-            this.btnDisplayAll.Location = new System.Drawing.Point(30, 446);
+            this.btnDisplayAll.Location = new System.Drawing.Point(58, 386);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(99, 66);
             this.btnDisplayAll.TabIndex = 15;
@@ -226,7 +227,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 67);
+            this.label8.Location = new System.Drawing.Point(38, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 17);
             this.label8.TabIndex = 13;
@@ -234,16 +235,16 @@
             // 
             // tbSearchYear
             // 
-            this.tbSearchYear.Location = new System.Drawing.Point(71, 64);
+            this.tbSearchYear.Location = new System.Drawing.Point(86, 64);
             this.tbSearchYear.MaxLength = 4;
             this.tbSearchYear.Name = "tbSearchYear";
-            this.tbSearchYear.Size = new System.Drawing.Size(100, 22);
+            this.tbSearchYear.Size = new System.Drawing.Size(73, 22);
             this.tbSearchYear.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 220);
+            this.label7.Location = new System.Drawing.Point(27, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(159, 17);
             this.label7.TabIndex = 11;
@@ -252,7 +253,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 18);
+            this.label6.Location = new System.Drawing.Point(51, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 17);
             this.label6.TabIndex = 0;
@@ -296,12 +297,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDisplayAll;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbSearchYear;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnClearAll;
     }
 }
 

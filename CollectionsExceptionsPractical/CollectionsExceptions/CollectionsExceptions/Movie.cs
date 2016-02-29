@@ -10,10 +10,7 @@ namespace CollectionsExceptions
     {
         public int Year { get; set; }
         public String Title { get; set; }
-        public String Director { get; set; }
-
-
-
+        public String Director { get; set; } 
 
         public Movie (int year, String title, String director)
         {

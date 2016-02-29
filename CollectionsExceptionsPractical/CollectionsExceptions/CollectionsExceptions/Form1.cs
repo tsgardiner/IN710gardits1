@@ -48,5 +48,14 @@ namespace CollectionsExceptions
         {
             displayMovie.DisplayAll();
         }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            lbDisplay.Items.Clear();
+            tbAddDirector.Clear();
+            tbAddTitle.Clear();
+            tbAddYear.Clear();
+            tbSearchYear.Clear();
+        }
     }
 }

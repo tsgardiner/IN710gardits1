@@ -24,22 +24,37 @@ namespace CollectionsExceptions
 
         public void AddMoiveToTable()
         {
-            
+            try
+            {
                 year = int.Parse(addYear.Text);
                 title = addTitle.Text;
-                director = addDirector.Text;
+                director = addDirector.Text; 
 
-
-            if (!movieTable.ContainsKey(year))
-            {
-                Movie addMovieEntry = new Movie(year, title, director);
-                movieTable.Add(addMovieEntry.Year, addMovieEntry);
-                MessageBox.Show("Movie entry successfully added.");
+                if (!movieTable.ContainsKey(year))
+                {
+                    Movie addMovieEntry = new Movie(year, title, director);
+                    movieTable.Add(addMovieEntry.Year, addMovieEntry);
+                    MessageBox.Show("Movie entry successfully added.");
+                    clearAddFields();
+                }
+                else
+                    MessageBox.Show("A movie from this year already exists.");
+                    clearAddFields();
             }
-            else
-                MessageBox.Show("A movie with this key already exists.");
+            catch (FormatException)
+            {
+                MessageBox.Show("Failed to add Movie. \n Please make sure all fields are filled correctly.");                
+            }   
+        } //End of Add
+
+
+        private void clearAddFields()
+        {
+            addYear.Clear();
+            addTitle.Clear();
+            addDirector.Clear();
         }
 
-
+        
     }
 }
