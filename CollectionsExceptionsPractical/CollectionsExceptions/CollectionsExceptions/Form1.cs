@@ -38,7 +38,7 @@ namespace CollectionsExceptions
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            searchMovies.SearchByYear();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -54,9 +54,7 @@ namespace CollectionsExceptions
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             lbDisplay.Items.Clear();
-            tbAddDirector.Clear();
-            tbAddTitle.Clear();
-            tbAddYear.Clear();
+            AddMovie.ClearAddFields();
             tbSearchYear.Clear();
         }
     }

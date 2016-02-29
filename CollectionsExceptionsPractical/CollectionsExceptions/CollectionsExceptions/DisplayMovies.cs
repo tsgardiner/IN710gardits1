@@ -9,13 +9,13 @@ namespace CollectionsExceptions
 {
     class DisplayMovies
     {
-        ListBox lbDisplay;
+        static ListBox lbDisplay;
         Dictionary<int, Movie> moviesTable;
         
 
-        public DisplayMovies(ListBox lbDisplay, Dictionary<int, Movie> moviesTable)
+        public DisplayMovies(ListBox LBDisplay, Dictionary<int, Movie> moviesTable)
         {
-            this.lbDisplay = lbDisplay;
+            lbDisplay = LBDisplay;
             this.moviesTable = moviesTable;
         }
 
@@ -31,14 +31,18 @@ namespace CollectionsExceptions
             }
         }
 
-        public void DisplaySearch()
+        public static void DisplaySearch(Movie searchedMovie)
         {
-
+            lbDisplay.Items.Add(searchedMovie.ToString());
         }
 
-        public void DisplayAddedMovie()
+        public static void DisplayAddedMovie()
         {
 
+        }  
+        public static void ClearLbDisplay()
+        {
+            lbDisplay.Items.Clear();
         }
 
     }

@@ -20,7 +20,20 @@ namespace CollectionsExceptions
 
         public void SearchByYear()
         {
-
-        }
+            DisplayMovies.ClearLbDisplay();
+            Movie searchedMovie;
+            try
+            {                  
+                int searchedYear = Convert.ToInt16(tbSearchYear.Text);
+                if (movieTable.TryGetValue(searchedYear, out searchedMovie))                    
+                        DisplayMovies.DisplaySearch(searchedMovie);
+                    else
+                        MessageBox.Show("The movie searched couldn't be found. \nMake sure it's entered correctly.");                                     
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("The movie searched couldn't be found. \nMake sure it's entered correctly.");
+            }             
+        } //End of Search by year
     }
 }

@@ -9,16 +9,16 @@ namespace CollectionsExceptions
 {
     class AddMovie
     {
-        TextBox addYear, addTitle, addDirector;
+        static TextBox addYear, addTitle, addDirector;
         String title, director;
         Dictionary<int, Movie> movieTable;
         int year;
 
-        public AddMovie(TextBox addYear, TextBox addTitle, TextBox addDirector, Dictionary<int, Movie> movieTable)
+        public AddMovie(TextBox AddYear, TextBox AddTitle, TextBox AddDirector, Dictionary<int, Movie> movieTable)
         {
-            this.addYear = addYear;
-            this.addTitle = addTitle;
-            this.addDirector = addDirector;
+            addYear = AddYear;
+            addTitle = AddTitle;
+            addDirector = AddDirector;
             this.movieTable = movieTable;
         }
 
@@ -35,20 +35,21 @@ namespace CollectionsExceptions
                     Movie addMovieEntry = new Movie(year, title, director);
                     movieTable.Add(addMovieEntry.Year, addMovieEntry);
                     MessageBox.Show("Movie entry successfully added.");
-                    clearAddFields();
+                    DisplayMovies.DisplayAddedMovie();
+                    ClearAddFields();
                 }
                 else
                     MessageBox.Show("A movie from this year already exists.");
-                    clearAddFields();
+                    ClearAddFields();
             }
             catch (FormatException)
             {
-                MessageBox.Show("Failed to add Movie. \n Please make sure all fields are filled correctly.");                
+                MessageBox.Show("Failed to add Movie. \nPlease make sure all fields are filled correctly.");                
             }   
         } //End of Add
 
 
-        private void clearAddFields()
+        public static void ClearAddFields()
         {
             addYear.Clear();
             addTitle.Clear();
