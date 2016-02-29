@@ -45,7 +45,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDisplayAll = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbSearchYear = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,7 +66,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(293, 121);
+            this.btnDelete.Location = new System.Drawing.Point(30, 269);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 66);
             this.btnDelete.TabIndex = 1;
@@ -137,9 +136,9 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lbDisplay);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(730, 23);
+            this.panel1.Location = new System.Drawing.Point(32, 223);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 488);
+            this.panel1.Size = new System.Drawing.Size(650, 396);
             this.panel1.TabIndex = 9;
             // 
             // lbDisplay
@@ -148,7 +147,7 @@
             this.lbDisplay.ItemHeight = 16;
             this.lbDisplay.Location = new System.Drawing.Point(19, 39);
             this.lbDisplay.Name = "lbDisplay";
-            this.lbDisplay.Size = new System.Drawing.Size(297, 436);
+            this.lbDisplay.Size = new System.Drawing.Size(606, 340);
             this.lbDisplay.TabIndex = 9;
             // 
             // panel2
@@ -191,22 +190,21 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.btnDisplayAll);
-            this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.tbSearchYear);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.btnSearch);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(32, 237);
+            this.panel3.Location = new System.Drawing.Point(701, 23);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(650, 274);
+            this.panel3.Size = new System.Drawing.Size(242, 596);
             this.panel3.TabIndex = 11;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(509, 17);
+            this.label9.Location = new System.Drawing.Point(27, 384);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 17);
             this.label9.TabIndex = 16;
@@ -214,23 +212,13 @@
             // 
             // btnDisplayAll
             // 
-            this.btnDisplayAll.Location = new System.Drawing.Point(509, 121);
+            this.btnDisplayAll.Location = new System.Drawing.Point(30, 446);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(99, 66);
             this.btnDisplayAll.TabIndex = 15;
             this.btnDisplayAll.Text = "Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(294, 67);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(134, 21);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Confirm Deletion";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -243,7 +231,7 @@
             // 
             // tbSearchYear
             // 
-            this.tbSearchYear.Location = new System.Drawing.Point(90, 62);
+            this.tbSearchYear.Location = new System.Drawing.Point(88, 64);
             this.tbSearchYear.Name = "tbSearchYear";
             this.tbSearchYear.Size = new System.Drawing.Size(100, 22);
             this.tbSearchYear.TabIndex = 12;
@@ -251,11 +239,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(291, 18);
+            this.label7.Location = new System.Drawing.Point(27, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 17);
+            this.label7.Size = new System.Drawing.Size(155, 17);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Delete Current Movie";
+            this.label7.Text = "Delete Searched Movie";
             // 
             // label6
             // 
@@ -270,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 532);
+            this.ClientSize = new System.Drawing.Size(976, 645);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -306,7 +294,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDisplayAll;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbSearchYear;
         private System.Windows.Forms.Label label7;

@@ -9,15 +9,13 @@ namespace CollectionsExceptions
     class MovieDictionary
     {
         Dictionary<int, Movie> movieTable;
-        public Dictionary<int, Movie> MovieTable { get; set; }
-
         public MovieDictionary(Dictionary<int, Movie> movieTable)
         {
             this.movieTable = movieTable;
             createMovieTable();
         }
 
-        public void createMovieTable()
+        private void createMovieTable()
         {                                                                      
 
         Movie movie1 = new Movie(1961, "West SideStory", "Jerome Robbins");

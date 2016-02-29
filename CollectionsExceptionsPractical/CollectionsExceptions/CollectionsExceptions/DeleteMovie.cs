@@ -8,7 +8,13 @@ namespace CollectionsExceptions
 {
     class DeleteMovie
     {
-        public DeleteMovie()
+        Dictionary<int, Movie> movieTable;
+        public DeleteMovie(Dictionary<int, Movie> movieTable)
+        {
+            this.movieTable = movieTable;
+        }
+
+        public void DeleteSearchedMovie()
         {
 
         }

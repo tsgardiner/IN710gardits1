@@ -15,8 +15,8 @@ namespace CollectionsExceptions
         MovieDictionary movieDictionary;
         AddMovie addMovie;
         DisplayMovies displayMovie;
-        Dictionary<int, Movie> movieTable;
-        
+        DeleteMovie deleteMovie;
+        Dictionary<int, Movie> movieTable;             
 
         public Form1()
         {
@@ -26,6 +26,7 @@ namespace CollectionsExceptions
             movieDictionary = new MovieDictionary(movieTable);
             addMovie = new AddMovie(tbAddYear, tbAddTitle, tbAddDirector, movieTable);
             displayMovie = new DisplayMovies(lbDisplay, movieTable);
+            deleteMovie = new DeleteMovie(movieTable);
         }
 
         private void btnAddMovie_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace CollectionsExceptions
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+             
         }
 
         private void btnDisplayAll_Click(object sender, EventArgs e)
