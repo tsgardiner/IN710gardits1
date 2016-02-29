@@ -13,6 +13,8 @@ namespace CollectionsExceptions
         public String Director { get; set; }
 
 
+
+
         public Movie (int year, String title, String director)
         {
             Year = year;
@@ -22,7 +24,9 @@ namespace CollectionsExceptions
 
         public override string ToString()
         {
-            return "Year: " + Year.ToString() + "/n " + "Title: " + Title + "/n" + "Director: " + Director + "/n";
+            //Can't have new lines in toString methods
+            //Tried multiple fixes with no results.
+            return String.Format("Year: " + Year.ToString() + "{0}" + "Title: " + Title + "\r\n" + "Director: " + Director, Environment.NewLine);
         }
 
 

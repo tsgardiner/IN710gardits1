@@ -12,14 +12,20 @@ namespace CollectionsExceptions
 {
     public partial class Form1 : Form
     {
+        MovieDictionary movieDictionary;
+        AddMovie addMovie;
+        DisplayMovies displayMovie;
+        Dictionary<int, Movie> movieTable;
         
+
         public Form1()
         {
-            InitializeComponent();  
-            
-            MovieDictionaryInit movieTable = new MovieDictionaryInit();
-            AddMovie addMovie = new AddMovie(tbAddYear, tbAddTitle, tbAddDirector, movieTable.MovieTable);
-            DisplayMovies displayMovie = new DisplayMovies(lbDisplay, movieTable.MovieTable);
+            InitializeComponent();
+
+            movieTable = new Dictionary<int, Movie>();
+            movieDictionary = new MovieDictionary(movieTable);
+            addMovie = new AddMovie(tbAddYear, tbAddTitle, tbAddDirector, movieTable);
+            displayMovie = new DisplayMovies(lbDisplay, movieTable);
         }
 
         private void btnAddMovie_Click(object sender, EventArgs e)
@@ -39,7 +45,7 @@ namespace CollectionsExceptions
 
         private void btnDisplayAll_Click(object sender, EventArgs e)
         {
-
+            displayMovie.DisplayAll();
         }
     }
 }

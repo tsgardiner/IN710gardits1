@@ -19,11 +19,15 @@ namespace CollectionsExceptions
             this.moviesTable = moviesTable;
         }
 
+        //Display doesn't look quite right as toString method isn't responding to formatting.
         public void  DisplayAll()
         {
+            lbDisplay.Items.Clear();
             foreach (KeyValuePair<int, Movie> currentMovie in moviesTable)
             {
-                
+                lbDisplay.Items.Add("Key: " + currentMovie.Key.ToString());
+                lbDisplay.Items.Add(currentMovie.Value.ToString());
+                lbDisplay.Items.Add("-------------------------------");
             }
         }
 

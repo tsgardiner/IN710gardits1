@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace CollectionsExceptions
 {
-    class MovieDictionaryInit
+    class MovieDictionary
     {
-        Dictionary<int, Movie> movieTable = new Dictionary<int, Movie>();
+        Dictionary<int, Movie> movieTable;
         public Dictionary<int, Movie> MovieTable { get; set; }
 
-        public MovieDictionaryInit()
+        public MovieDictionary(Dictionary<int, Movie> movieTable)
         {
+            this.movieTable = movieTable;
             createMovieTable();
         }
 
