@@ -79,45 +79,48 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Year";
+            this.label1.Text = "Year:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(26, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 17);
+            this.label2.Size = new System.Drawing.Size(39, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Title";
+            this.label2.Text = "Title:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Director";
+            this.label3.Text = "Director:";
             // 
             // tbAddYear
             // 
-            this.tbAddYear.Location = new System.Drawing.Point(88, 46);
+            this.tbAddYear.Location = new System.Drawing.Point(94, 46);
+            this.tbAddYear.MaxLength = 4;
             this.tbAddYear.Name = "tbAddYear";
             this.tbAddYear.Size = new System.Drawing.Size(101, 22);
             this.tbAddYear.TabIndex = 5;
             // 
             // tbAddTitle
             // 
-            this.tbAddTitle.Location = new System.Drawing.Point(88, 90);
+            this.tbAddTitle.Location = new System.Drawing.Point(94, 90);
+            this.tbAddTitle.MaxLength = 50;
             this.tbAddTitle.Name = "tbAddTitle";
             this.tbAddTitle.Size = new System.Drawing.Size(385, 22);
             this.tbAddTitle.TabIndex = 6;
             // 
             // tbAddDirector
             // 
-            this.tbAddDirector.Location = new System.Drawing.Point(88, 135);
+            this.tbAddDirector.Location = new System.Drawing.Point(94, 137);
+            this.tbAddDirector.MaxLength = 30;
             this.tbAddDirector.Name = "tbAddDirector";
             this.tbAddDirector.Size = new System.Drawing.Size(385, 22);
             this.tbAddDirector.TabIndex = 7;
@@ -129,7 +132,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Moive Display";
+            this.label4.Text = "Movie Display";
             // 
             // panel1
             // 
@@ -198,7 +201,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(701, 23);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(242, 596);
+            this.panel3.Size = new System.Drawing.Size(205, 596);
             this.panel3.TabIndex = 11;
             // 
             // label9
@@ -206,9 +209,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(27, 384);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 17);
+            this.label9.Size = new System.Drawing.Size(124, 17);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Display all Movies";
+            this.label9.Text = "Display all Movies:";
             // 
             // btnDisplayAll
             // 
@@ -225,13 +228,14 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(27, 67);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 17);
+            this.label8.Size = new System.Drawing.Size(42, 17);
             this.label8.TabIndex = 13;
-            this.label8.Text = "Year";
+            this.label8.Text = "Year:";
             // 
             // tbSearchYear
             // 
-            this.tbSearchYear.Location = new System.Drawing.Point(88, 64);
+            this.tbSearchYear.Location = new System.Drawing.Point(71, 64);
+            this.tbSearchYear.MaxLength = 4;
             this.tbSearchYear.Name = "tbSearchYear";
             this.tbSearchYear.Size = new System.Drawing.Size(100, 22);
             this.tbSearchYear.TabIndex = 12;
@@ -241,9 +245,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(27, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 17);
+            this.label7.Size = new System.Drawing.Size(159, 17);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Delete Searched Movie";
+            this.label7.Text = "Delete Searched Movie:";
             // 
             // label6
             // 
@@ -258,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 645);
+            this.ClientSize = new System.Drawing.Size(918, 645);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

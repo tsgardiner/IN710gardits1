@@ -31,7 +31,7 @@ namespace CollectionsExceptions
 
         private void btnAddMovie_Click(object sender, EventArgs e)
         {
-
+            addMovie.AddMoiveToTable();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

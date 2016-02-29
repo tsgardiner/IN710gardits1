@@ -10,8 +10,9 @@ namespace CollectionsExceptions
     class AddMovie
     {
         TextBox addYear, addTitle, addDirector;
-        String year, title, director;
+        String title, director;
         Dictionary<int, Movie> movieTable;
+        int year;
 
         public AddMovie(TextBox addYear, TextBox addTitle, TextBox addDirector, Dictionary<int, Movie> movieTable)
         {
@@ -23,9 +24,20 @@ namespace CollectionsExceptions
 
         public void AddMoiveToTable()
         {
-            year = addYear.Text;
-            title = addTitle.Text;
-            director = addDirector.Text;
+            
+                year = int.Parse(addYear.Text);
+                title = addTitle.Text;
+                director = addDirector.Text;
+
+
+            if (!movieTable.ContainsKey(year))
+            {
+                Movie addMovieEntry = new Movie(year, title, director);
+                movieTable.Add(addMovieEntry.Year, addMovieEntry);
+                MessageBox.Show("Movie entry successfully added.");
+            }
+            else
+                MessageBox.Show("A movie with this key already exists.");
         }
 
 
