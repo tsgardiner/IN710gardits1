@@ -22,7 +22,7 @@ namespace CollectionsExceptions
 
         public override string ToString()
         {
-            return Year.ToString() + "/n " + Title + "/n" + Director + "/n/n";
+            return "Year: " + Year.ToString() + "/n " + "Title: " + Title + "/n" + "Director: " + Director + "/n";
         }
 
 
