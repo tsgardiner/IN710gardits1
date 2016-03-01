@@ -9,11 +9,11 @@ namespace CollectionsExceptions
 {
     class DisplayMovies
     {
-        static ListBox lbDisplay;
+        static RichTextBox lbDisplay;
         Dictionary<int, Movie> moviesTable;
         
 
-        public DisplayMovies(ListBox LBDisplay, Dictionary<int, Movie> moviesTable)
+        public DisplayMovies(RichTextBox LBDisplay, Dictionary<int, Movie> moviesTable)
         {
             lbDisplay = LBDisplay;
             this.moviesTable = moviesTable;
@@ -22,18 +22,18 @@ namespace CollectionsExceptions
         //Display doesn't look quite right as toString method isn't responding to formatting.
         public void  DisplayAll()
         {
-            lbDisplay.Items.Clear();
+            lbDisplay.Clear();
             foreach (KeyValuePair<int, Movie> currentMovie in moviesTable)
             {
-                lbDisplay.Items.Add("Key: " + currentMovie.Key.ToString());
-                lbDisplay.Items.Add(currentMovie.Value.ToString());
-                lbDisplay.Items.Add("-------------------------------");
+                lbDisplay.AppendText("Key: " + currentMovie.Key.ToString() + "\n");
+                lbDisplay.AppendText(currentMovie.Value.ToString() + "\n");
+                lbDisplay.AppendText("-------------------------------" +"\n");
             }
         }
 
         public static void DisplaySearch(Movie searchedMovie)
         {
-            lbDisplay.Items.Add(searchedMovie.ToString());
+            lbDisplay.AppendText(searchedMovie.ToString());
         }
 
         public static void DisplayAddedMovie()
@@ -42,7 +42,7 @@ namespace CollectionsExceptions
         }  
         public static void ClearLbDisplay()
         {
-            lbDisplay.Items.Clear();
+            lbDisplay.Clear();
         }
 
     }

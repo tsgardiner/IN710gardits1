@@ -23,7 +23,7 @@ namespace CollectionsExceptions
         {
             //Can't have new lines in toString methods
             //Tried multiple fixes with no results.
-            return String.Format("Year: " + Year.ToString() + "{0}" + " Title: " + Title + "\r\n" + " Director: " + Director, Environment.NewLine);
+            return String.Format("Year: " + Year.ToString()  + "\n" + " Title: " + Title + "\r\n" + " Director: " + Director );
         }
 
 

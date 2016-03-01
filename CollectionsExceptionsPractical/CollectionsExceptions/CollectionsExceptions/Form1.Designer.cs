@@ -38,7 +38,6 @@
             this.tbAddDirector = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbDisplay = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.tbSearchYear = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -137,21 +137,12 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lbDisplay);
+            this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(32, 223);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(650, 396);
             this.panel1.TabIndex = 9;
-            // 
-            // lbDisplay
-            // 
-            this.lbDisplay.FormattingEnabled = true;
-            this.lbDisplay.ItemHeight = 16;
-            this.lbDisplay.Location = new System.Drawing.Point(19, 39);
-            this.lbDisplay.Name = "lbDisplay";
-            this.lbDisplay.Size = new System.Drawing.Size(606, 340);
-            this.lbDisplay.TabIndex = 9;
             // 
             // panel2
             // 
@@ -259,6 +250,14 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Search by Year";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(19, 39);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(606, 340);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,7 +292,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListBox lbDisplay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel3;
@@ -303,6 +301,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnClearAll;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

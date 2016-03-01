@@ -17,6 +17,7 @@ namespace CollectionsExceptions
 
         public void DeleteSearchedMovie()
         {
+            
             DialogResult deleteConfirm = MessageBox.Show(
                 "Are you sure you want to delete this movie?",
                 "Delete Confirmation",

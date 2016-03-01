@@ -26,7 +26,7 @@ namespace CollectionsExceptions
             movieTable = new Dictionary<int, Movie>();
             movieDictionary = new MovieDictionary(movieTable);
             addMovie = new AddMovie(tbAddYear, tbAddTitle, tbAddDirector, movieTable);
-            displayMovie = new DisplayMovies(lbDisplay, movieTable);
+            displayMovie = new DisplayMovies(richTextBox1, movieTable);
             deleteMovie = new DeleteMovie(tbSearchYear, movieTable);
             searchMovies = new SearchMovies(tbSearchYear, movieTable);
         }
@@ -53,7 +53,7 @@ namespace CollectionsExceptions
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
-            lbDisplay.Items.Clear();
+            richTextBox1.Clear();
             AddMovie.ClearAddFields();
             tbSearchYear.Clear();
         }
