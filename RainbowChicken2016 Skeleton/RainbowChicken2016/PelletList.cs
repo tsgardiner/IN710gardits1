@@ -108,29 +108,19 @@ namespace RainbowChicken2016
             }
             else
             {
-                if (pelletToDelete != tailPointer)
-                {
-                    while (nodeWalker != null) // nodeWalker.Next != pelletToDelete was causing excpetion, seems to work now.
-                    {
-                        if (nodeWalker.Next == pelletToDelete)
-                        {
-                            nodeWalker.Next = pelletToDelete.Next;
-                        }
-
-                        nodeWalker = nodeWalker.Next;
-                    }
-                }
-                else
-                {
-                    while (nodeWalker.Next != tailPointer.Next)
-                    {
-                        nodeWalker = nodeWalker.Next;
+                    while (nodeWalker != null) 
+                    {    
                         if (nodeWalker.Next == tailPointer)
                         {
                             tailPointer = nodeWalker;
                         }
-                    }
-                }
+
+                        if (nodeWalker.Next == pelletToDelete)
+                        {
+                            nodeWalker.Next = pelletToDelete.Next;
+                        } 
+                        nodeWalker = nodeWalker.Next;
+                    }                
             }
 
             //My first attempt that failed
