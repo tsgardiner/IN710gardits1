@@ -63,7 +63,7 @@ namespace RainbowChicken2016
 
             while (nodeWalker != null)
             {
-                nodeWalker.Draw();
+                nodeWalker.Move();
                 nodeWalker = nodeWalker.Next;
             }            
         }
@@ -125,11 +125,13 @@ namespace RainbowChicken2016
 
             while (nodeWalker != null)
             {
-                if (!nodeWalker.IsAlive)
+                if (nodeWalker.IsAlive == false)
                 {
                     DeleteOne(nodeWalker);
-                    nodeWalker = nodeWalker.Next;
+                    
                 }
+
+                nodeWalker = nodeWalker.Next;
             }   
         }
 
