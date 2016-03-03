@@ -58,8 +58,14 @@ namespace RainbowChicken2016
         // Walk the list, calling the Move() method of each Pellet
         //==============================================================================
         public void Move()
-        {
-            throw new NotImplementedException();
+        {            
+            Pellet nodeWalker = headPointer;
+
+            while (nodeWalker != null)
+            {
+                nodeWalker.Draw();
+                nodeWalker = nodeWalker.Next;
+            }            
         }
 
         //==============================================================================
@@ -68,7 +74,14 @@ namespace RainbowChicken2016
         //==============================================================================
         public void KillOutOfBounds()
         {
-            throw new NotImplementedException();
+            Pellet nodeWalker = headPointer;
+
+            while (nodeWalker != null)
+            {
+                if (nodeWalker.TestOutOfBounds(boundsRectangle))
+                    nodeWalker.IsAlive = false; //Kill out of bounds pellet
+                nodeWalker = nodeWalker.Next;
+            }   
         }
 
         //==============================================================================
