@@ -92,27 +92,28 @@ namespace RainbowChicken2016
         public void DeleteOne(Pellet pelletToDelete)
         {
             Pellet nodeWalker = headPointer;
-            Pellet previousPellet = null;
-
-            while (nodeWalker != null)
+            //Pellet previousPellet = null;
+            if ((pelletToDelete != headPointer) && (pelletToDelete != tailPointer))
             {
-                if ((pelletToDelete != headPointer) && (pelletToDelete != tailPointer))
+                 while (nodeWalker.Next != pelletToDelete)
                 {
-                    if (nodeWalker == pelletToDelete)
+                    nodeWalker = nodeWalker.Next;                
+                    //nodeWalker = nodeWalker.Next;
+                    if (nodeWalker.Next == pelletToDelete)
                     {
-                        previousPellet.Next = nodeWalker.Next;
+                        nodeWalker.Next = pelletToDelete.Next;
                     }
-                    else
-                    {
-                        previousPellet = nodeWalker;
-                    }
-                }
-                else
-                {
-                    headPointer = null;
-                    tailPointer = null;
-                }  
-            }                
+                    //else
+                    //{
+                    //    previousPellet = nodeWalker;
+                    //}
+                }                
+            }
+            else
+            {
+                headPointer = null;
+                tailPointer = null;
+            }    
            
         }
 
