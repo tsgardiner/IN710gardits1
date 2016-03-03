@@ -110,7 +110,7 @@ namespace RainbowChicken2016
             {
                 if (pelletToDelete != tailPointer)
                 {
-                    while (nodeWalker.Next != pelletToDelete)
+                    while (nodeWalker != null) // nodeWalker.Next != pelletToDelete was causing excpetion, seems to work now.
                     {
                         if (nodeWalker.Next == pelletToDelete)
                         {
