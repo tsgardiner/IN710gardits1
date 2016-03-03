@@ -79,7 +79,9 @@ namespace RainbowChicken2016
             while (nodeWalker != null)
             {
                 if (nodeWalker.TestOutOfBounds(boundsRectangle))
+                {
                     nodeWalker.IsAlive = false; //Kill out of bounds pellet
+                }
                 nodeWalker = nodeWalker.Next;
             }   
         }
@@ -92,28 +94,79 @@ namespace RainbowChicken2016
         public void DeleteOne(Pellet pelletToDelete)
         {
             Pellet nodeWalker = headPointer;
-            //Pellet previousPellet = null;
-            if ((pelletToDelete != headPointer) && (pelletToDelete != tailPointer))
+            if (pelletToDelete == headPointer)
             {
-                 while (nodeWalker.Next != pelletToDelete)
+                if (pelletToDelete != tailPointer)
                 {
-                    nodeWalker = nodeWalker.Next;                
-                    //nodeWalker = nodeWalker.Next;
-                    if (nodeWalker.Next == pelletToDelete)
-                    {
-                        nodeWalker.Next = pelletToDelete.Next;
-                    }
-                    //else
-                    //{
-                    //    previousPellet = nodeWalker;
-                    //}
-                }                
+                    headPointer = pelletToDelete.Next;
+                }
+                else
+                {
+                    headPointer = null;
+                    tailPointer = null;
+                }
             }
             else
             {
-                headPointer = null;
-                tailPointer = null;
-            }    
+                if (pelletToDelete != tailPointer)
+                {
+                    while (nodeWalker.Next != pelletToDelete)
+                    {
+                        if (nodeWalker.Next == pelletToDelete)
+                        {
+                            nodeWalker.Next = pelletToDelete.Next;
+                        }
+
+                        nodeWalker = nodeWalker.Next;
+                    }
+                }
+                else
+                {
+                    while (nodeWalker.Next != tailPointer.Next)
+                    {
+                        nodeWalker = nodeWalker.Next;
+                        if (nodeWalker.Next == tailPointer)
+                        {
+                            tailPointer = nodeWalker;
+                        }
+                    }
+                }
+            }
+
+            //My first attempt that failed
+            //Pellet nodeWalker = headPointer;
+            //Pellet previousPellet = null;
+            //if ((pelletToDelete != headPointer) && (pelletToDelete != tailPointer))
+            //{
+            //    if (pelletToDelete == nodeWalker)
+            //    {
+            //        headPointer = pelletToDelete.Next;
+            //    }
+            //    else
+            //    {
+            //        while (nodeWalker.Next != pelletToDelete)
+            //        {
+            //            previousPellet = nodeWalker;
+            //            nodeWalker = nodeWalker.Next;
+
+            //            if (nodeWalker.Next == pelletToDelete)
+            //            {
+            //                nodeWalker.Next = pelletToDelete.Next;
+
+            //                if (pelletToDelete == tailPointer)
+            //                {
+            //                    tailPointer = previousPellet;
+            //                }
+            //            }
+
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    headPointer = null;
+            //    tailPointer = null;
+            //}    
            
         }
 
@@ -128,8 +181,7 @@ namespace RainbowChicken2016
             {
                 if (nodeWalker.IsAlive == false)
                 {
-                    DeleteOne(nodeWalker);
-                    
+                    DeleteOne(nodeWalker);                    
                 }
 
                 nodeWalker = nodeWalker.Next;
