@@ -19,27 +19,41 @@ namespace StackUnitTesting
 
         public void Push(string newString)
         {
-            
+            linkedList.addFirst(newString);   
         }
 
         public string Pop()
         {
-            return null;
+            try
+            {
+               return linkedList.deleteFirst();
+            }
+            catch (InvalidOperationException)
+            {                
+                throw new InvalidOperationException();
+            }
         }
 
         public string Peek()
         {
-            return null;
+            try
+            {
+                return linkedList.getFirstData();
+            }
+            catch (InvalidOperationException)
+            {
+                throw new InvalidOperationException();
+            }            
         }
 
         public int Count()
         {
-            return 0;
+            return linkedList.Count();
         }
 
         public bool isEmpty()
         {
-            return false;
+            return linkedList.isEmpty();
         }
 
     }
