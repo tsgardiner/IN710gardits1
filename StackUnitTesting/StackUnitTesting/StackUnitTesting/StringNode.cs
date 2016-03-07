@@ -8,16 +8,13 @@ namespace StackUnitTesting
 {
     class StringNode
     {
-        public String Data;
+        public string Data;
         public StringNode Next { get; set; }
 
-        public StringNode(String data)
+        public StringNode(string data)
         {
             Data = data;
             Next = null;
         }
-
-
-
     }
 }

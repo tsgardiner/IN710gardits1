@@ -9,23 +9,25 @@ namespace StackUnitTesting
     class Stack
     {
 
+        StringNodeList linkedList;
+
         public Stack()
         {
-
+            linkedList = new StringNodeList();
         }
 
 
         public void Push(string newString)
         {
-
+            
         }
 
-        public String Pop()
+        public string Pop()
         {
             return null;
         }
 
-        public String Peek()
+        public string Peek()
         {
             return null;
         }

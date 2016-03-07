@@ -16,7 +16,7 @@ namespace StackUnitTesting
         }
 
         //Adds a new node at the top of the stack
-        public void addFirst(String newString)
+        public void addFirst(string newString)
         {
             StringNode newNode = new StringNode(newString);
             newNode.Next = head;
@@ -36,14 +36,19 @@ namespace StackUnitTesting
             return count;
         }
 
-        public String deleteFirst()
+        public string deleteFirst()
         {
-            String data = null;
+            string data = null;
             StringNode toDelete = new StringNode(data);
 
             toDelete = head;
             head = head.Next;
             return toDelete.Data;            
+        }
+
+        public string getFirstData()
+        {
+            return head.Data;
         }
 
         public bool isEmpty()
