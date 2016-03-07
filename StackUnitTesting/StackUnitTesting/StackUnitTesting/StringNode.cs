@@ -8,10 +8,12 @@ namespace StackUnitTesting
 {
     class StringNode
     {
-        public String Next { get; set; }
+        public String Data;
+        public StringNode Next { get; set; }
 
-        public StringNode()
+        public StringNode(String data)
         {
+            Data = data;
             Next = null;
         }
 
