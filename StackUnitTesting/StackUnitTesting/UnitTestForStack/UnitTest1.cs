@@ -9,6 +9,7 @@ namespace UnitTestForStack
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }

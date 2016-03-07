@@ -6,28 +6,19 @@ using System.Threading.Tasks;
 
 namespace StackUnitTesting
 {
-    class Stack
+    class StringNodeList
     {
+        StringNode head = null;
+        StringNode tail = null;
 
-        public Stack()
+        public StringNodeList()
         {
 
         }
 
-
-        public void Push(string newString)
+        public void addFirst(StringNode newString)
         {
 
-        }
-
-        public String Pop()
-        {
-            return null;
-        }
-
-        public String Peek()
-        {
-            return null;
         }
 
         public int Count()
@@ -35,9 +26,14 @@ namespace StackUnitTesting
             return 0;
         }
 
+        public void deleteFirst()
+        {
+
+        }
+
         public bool isEmpty()
         {
-            return false;
+            return (head == null);
         }
 
     }
