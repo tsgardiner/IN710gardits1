@@ -110,7 +110,7 @@ namespace UnitTestForStack
         {
             Stack stack = new Stack();
             stack.Push("Testing1");
-            stack.Push("Testing1");
+            stack.Push("Testing2");
 
             stack.Pop();
 
@@ -119,5 +119,76 @@ namespace UnitTestForStack
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Stack_PushPopPeek_EmptyStack_ReturnLastString()
+        {
+            Stack stack = new Stack();
+            stack.Push("Testing1");
+            stack.Push("Testing2");
+            stack.Push("Testing3");
+
+            stack.Pop();
+
+            string expected = "Testing2";
+            string actual = stack.Peek();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Stack_PushLargeAmountCount_ReturnCount()
+        {
+            Stack stack = new Stack();
+            for (int i = 0; i < 10000000; i++)
+            {
+                stack.Push("Testing");
+            }
+           
+            int expected = 10000000;
+            int actual = stack.Count();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Stack_PushPopLargeAmount_ReturnCount()
+        {
+            Stack stack = new Stack();
+            for (int i = 0; i < 10000000; i++)
+            {
+                stack.Push("Testing");
+            }
+
+            for (int i = 0; i < 10000000; i++)
+            {
+                stack.Pop();
+            }
+
+            int expected = 0;
+            int actual = stack.Count();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void Stack_Push_PopPastEmpty_ThrowException()
+        {
+            Stack stack = new Stack();
+            stack.Push("Testing1");
+            stack.Push("Testing2");
+            stack.Push("Testing3");
+            stack.Push("Testing4");
+            stack.Push("Testing5");
+
+            //Loop one more than items in stack
+            for (int i = 0; i < 6; i++)
+            {
+                stack.Pop();
+            }                        
+        }
     }
+
+
 }
