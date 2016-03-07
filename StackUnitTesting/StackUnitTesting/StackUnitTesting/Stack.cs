@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackUnitTesting
 {
-    class Stack
+    public class Stack
     {
 
         StringNodeList linkedList;
@@ -28,9 +28,9 @@ namespace StackUnitTesting
             {
                return linkedList.deleteFirst();
             }
-            catch (InvalidOperationException)
+            catch (NullReferenceException)
             {                
-                throw new InvalidOperationException();
+                throw new NullReferenceException("Cannot perfom delete on an empty stack.");
             }
         }
 
@@ -40,9 +40,9 @@ namespace StackUnitTesting
             {
                 return linkedList.getFirstData();
             }
-            catch (InvalidOperationException)
+            catch (NullReferenceException)
             {
-                throw new InvalidOperationException();
+                throw new NullReferenceException("The stack currently has no data.");
             }            
         }
 
