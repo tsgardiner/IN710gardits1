@@ -16,5 +16,20 @@ namespace Game_Character
         {
             InitializeComponent();
         }
+
+        private void btnAddCharacter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBattle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

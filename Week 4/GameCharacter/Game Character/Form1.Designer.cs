@@ -51,6 +51,7 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.rbClub = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -160,6 +161,7 @@
             this.btnAddCharacter.TabIndex = 8;
             this.btnAddCharacter.Text = "Create New Character";
             this.btnAddCharacter.UseVisualStyleBackColor = true;
+            this.btnAddCharacter.Click += new System.EventHandler(this.btnAddCharacter_Click);
             // 
             // panel2
             // 
@@ -207,6 +209,7 @@
             this.btnBattle.TabIndex = 22;
             this.btnBattle.Text = "Battle!";
             this.btnBattle.UseVisualStyleBackColor = true;
+            this.btnBattle.Click += new System.EventHandler(this.btnBattle_Click);
             // 
             // checkedListBox1
             // 
@@ -244,13 +247,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rbClub);
             this.groupBox2.Controls.Add(this.rdBow);
             this.groupBox2.Controls.Add(this.rdKnife);
             this.groupBox2.Controls.Add(this.rdSword);
             this.groupBox2.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 334);
+            this.groupBox2.Location = new System.Drawing.Point(16, 313);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(161, 107);
+            this.groupBox2.Size = new System.Drawing.Size(161, 138);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "New Weapon";
@@ -311,6 +315,7 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "Change Weapon";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -322,6 +327,18 @@
             this.label4.Size = new System.Drawing.Size(97, 21);
             this.label4.TabIndex = 25;
             this.label4.Text = "Character";
+            // 
+            // rbClub
+            // 
+            this.rbClub.AutoSize = true;
+            this.rbClub.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbClub.Location = new System.Drawing.Point(13, 102);
+            this.rbClub.Name = "rbClub";
+            this.rbClub.Size = new System.Drawing.Size(65, 25);
+            this.rbClub.TabIndex = 3;
+            this.rbClub.TabStop = true;
+            this.rbClub.Text = "Club";
+            this.rbClub.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -373,6 +390,7 @@
         private System.Windows.Forms.RadioButton rdBow;
         private System.Windows.Forms.RadioButton rdKnife;
         private System.Windows.Forms.RadioButton rdSword;
+        private System.Windows.Forms.RadioButton rbClub;
     }
 }
 

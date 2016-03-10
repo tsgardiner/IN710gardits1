@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
+    //Weapon classes that can be used by each character type
+
     public class Sword : IWeaponBehaviour
     {
         public string UseWeapon()
         {
-            throw new NotImplementedException();
+            return "I cleave with my sword!";
         }
     }
 
@@ -18,7 +20,7 @@ namespace Game_Character
     {
         public string UseWeapon()
         {
-            throw new NotImplementedException();
+            return "I stab with my knife!";
         }
     }
 
@@ -26,7 +28,15 @@ namespace Game_Character
     {
         public string UseWeapon()
         {
-            throw new NotImplementedException();
+            return "I shoot with my bow!";
+        }
+    }
+
+    public class Club : IWeaponBehaviour
+    {
+        public string UseWeapon()
+        {
+            return "I wack with my club!";
         }
     }
 }

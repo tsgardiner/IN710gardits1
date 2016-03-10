@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
+
+    //Parent class for all characters
     public class Character
     {
         public List<Character> characterList = new List<Character>();
-        private String name;
+        protected string Name {get; set;}
+        protected string declaim;
+        protected IWeaponBehaviour weapon;
+
+
+        public Character(string name)
+        {
+            Name = name;
+        }
 
 
 
