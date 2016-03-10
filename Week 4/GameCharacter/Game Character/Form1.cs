@@ -61,7 +61,25 @@ namespace Game_Character
 
         private void btnBattle_Click(object sender, EventArgs e)
         {
-            
+            listBox1.Items.Clear();
+
+            const int NUMBER_OF_FIGHTERS = 2;
+
+            if (checkedListBox1.CheckedItems.Count == NUMBER_OF_FIGHTERS)
+            {
+                foreach (Character character in Character.characterList)
+                {
+                    for (int i = 0; i < NUMBER_OF_FIGHTERS; i++)
+                    {
+                        if (character.Name == checkedListBox1.CheckedItems[i].ToString())
+                        {
+                            BattleCry(character);
+                        }
+                    }
+                } 
+            }
+            else
+                MessageBox.Show("Please select exactly two characters to battle.");
         }
 
         private void btnChangeWeapon_Click(object sender, EventArgs e)
@@ -76,12 +94,14 @@ namespace Game_Character
                         {
                             if (rdClub.Checked)
                                 character.weapon = new Club();
-                            if (rdBow.Checked)
+                            else if (rdBow.Checked)
                                 character.weapon = new Bow();
-                            if (rdSword.Checked)
+                            else if (rdSword.Checked)
                                 character.weapon = new Sword();
-                            if (rdKnife.Checked)
+                            else if (rdKnife.Checked)
                                 character.weapon = new Knife();
+                            else
+                                MessageBox.Show("Please select a new weapon to change to.");
                         }
                     }
                 }
@@ -101,6 +121,14 @@ namespace Game_Character
                 checkedListBox1.Items.Add(character.Name);
                 checkedListBox2.Items.Add(character.Name);
             }
+        }
+
+        public void BattleCry(Character character)
+        {            
+            listBox1.Items.Add("My name is " + character.Name);
+            listBox1.Items.Add(character.declaim);
+            listBox1.Items.Add(character.weapon.UseWeapon());
+            listBox1.Items.Add("");
         }
     }
 }

@@ -69,14 +69,14 @@
             this.panel1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 169);
+            this.panel1.Size = new System.Drawing.Size(527, 184);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 82);
+            this.label1.Location = new System.Drawing.Point(22, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 13;
@@ -89,7 +89,7 @@
             this.groupBox1.Controls.Add(this.rdQueen);
             this.groupBox1.Controls.Add(this.rdKing);
             this.groupBox1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(272, 18);
+            this.groupBox1.Location = new System.Drawing.Point(324, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(161, 138);
             this.groupBox1.TabIndex = 12;
@@ -147,7 +147,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(73, 79);
+            this.txtName.Location = new System.Drawing.Point(101, 48);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(164, 29);
             this.txtName.TabIndex = 9;
@@ -155,7 +155,7 @@
             // btnAddCharacter
             // 
             this.btnAddCharacter.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCharacter.Location = new System.Drawing.Point(20, 18);
+            this.btnAddCharacter.Location = new System.Drawing.Point(41, 98);
             this.btnAddCharacter.Name = "btnAddCharacter";
             this.btnAddCharacter.Size = new System.Drawing.Size(215, 32);
             this.btnAddCharacter.TabIndex = 8;
@@ -174,7 +174,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 196);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(453, 338);
+            this.panel2.Size = new System.Drawing.Size(528, 338);
             this.panel2.TabIndex = 20;
             // 
             // label3
@@ -202,7 +202,7 @@
             // btnBattle
             // 
             this.btnBattle.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBattle.Location = new System.Drawing.Point(222, 34);
+            this.btnBattle.Location = new System.Drawing.Point(267, 32);
             this.btnBattle.Margin = new System.Windows.Forms.Padding(2);
             this.btnBattle.Name = "btnBattle";
             this.btnBattle.Size = new System.Drawing.Size(218, 35);
@@ -229,7 +229,7 @@
             this.listBox1.Location = new System.Drawing.Point(222, 80);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(222, 235);
+            this.listBox1.Size = new System.Drawing.Size(297, 235);
             this.listBox1.TabIndex = 20;
             // 
             // panel3
@@ -239,7 +239,7 @@
             this.panel3.Controls.Add(this.checkedListBox2);
             this.panel3.Controls.Add(this.btnChangeWeapon);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(483, 9);
+            this.panel3.Location = new System.Drawing.Point(544, 11);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 524);
@@ -344,12 +344,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 551);
+            this.ClientSize = new System.Drawing.Size(783, 545);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Battle";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
