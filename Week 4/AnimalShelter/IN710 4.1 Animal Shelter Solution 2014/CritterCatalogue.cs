@@ -36,14 +36,9 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
 
             foreach (Critter critter in critterList)
             {
-                if ((Enum.Parse(typeof(ESpecies), speciesName) == speciesName))
-                {
-                    matchingCritters.Add(critter);
-                }
-                else
-                    MessageBox.Show("There are no critters that match that species.");
-            }
-
+                if ((ESpecies)Enum.Parse(typeof(ESpecies), speciesName) == critter.Species)                    
+                    matchingCritters.Add(critter);                              
+            }  
             return matchingCritters;
         }
 
