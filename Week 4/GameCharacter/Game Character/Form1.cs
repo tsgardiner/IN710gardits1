@@ -15,9 +15,9 @@ namespace Game_Character
         public Form1()
         {
             InitializeComponent();
+
             Character.CreateStartingCharaters();
-            PopulateListBoxes();
-            
+            PopulateListBoxes();            
         }
 
         private void btnAddCharacter_Click(object sender, EventArgs e)
@@ -57,17 +57,38 @@ namespace Game_Character
 	        }
 
             PopulateListBoxes();
-        }
+        } // End of Add 
 
         private void btnBattle_Click(object sender, EventArgs e)
         {
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChangeWeapon_Click(object sender, EventArgs e)
         {
-
-        }
+            if (checkedListBox2.CheckedItems.Count > 0)
+            {
+                foreach (Character character in Character.characterList)
+                {
+                    for (int i = 0; i < checkedListBox2.CheckedItems.Count; i++)
+                    {
+                        if (character.Name == checkedListBox2.CheckedItems[i].ToString())
+                        {
+                            if (rdClub.Checked)
+                                character.weapon = new Club();
+                            if (rdBow.Checked)
+                                character.weapon = new Bow();
+                            if (rdSword.Checked)
+                                character.weapon = new Sword();
+                            if (rdKnife.Checked)
+                                character.weapon = new Knife();
+                        }
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Please select at leaset one character to change their weapon.");
+        }//End of change weapon
 
 
         public void PopulateListBoxes()

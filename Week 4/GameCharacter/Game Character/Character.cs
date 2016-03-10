@@ -13,7 +13,7 @@ namespace Game_Character
         public static List<Character> characterList = new List<Character>();
         public string Name {get; set;}
         protected string declaim;
-        protected IWeaponBehaviour weapon;
+        public IWeaponBehaviour weapon { get; set; }
 
 
         public Character(string name)
