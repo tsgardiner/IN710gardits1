@@ -10,7 +10,7 @@ namespace Game_Character
     //Parent class for all characters
     public class Character
     {
-        public List<Character> characterList = new List<Character>();
+        public static List<Character> characterList = new List<Character>();
         protected string Name {get; set;}
         protected string declaim;
         protected IWeaponBehaviour weapon;
@@ -21,7 +21,13 @@ namespace Game_Character
             Name = name;
         }
 
-
+        public static void CreateStartingCharaters()
+        {
+            characterList.Add(new King("LeBron"));
+            characterList.Add(new Queen("Atziri"));
+            characterList.Add(new Troll("Trollolol"));
+            characterList.Add(new Knight("Geralt"));
+        }
 
     }
 }
