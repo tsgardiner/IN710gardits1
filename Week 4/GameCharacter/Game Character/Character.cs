@@ -11,7 +11,7 @@ namespace Game_Character
     public class Character
     {
         public static List<Character> characterList = new List<Character>();
-        protected string Name {get; set;}
+        public string Name {get; set;}
         protected string declaim;
         protected IWeaponBehaviour weapon;
 

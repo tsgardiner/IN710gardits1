@@ -16,6 +16,8 @@ namespace Game_Character
         {
             InitializeComponent();
             Character.CreateStartingCharaters();
+            PopulateListBoxes();
+            
         }
 
         private void btnAddCharacter_Click(object sender, EventArgs e)
@@ -52,17 +54,32 @@ namespace Game_Character
 	        catch (NullReferenceException)
 	        {
                 MessageBox.Show("Name cannot be null.");
-	        }            
+	        }
+
+            PopulateListBoxes();
         }
 
         private void btnBattle_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void PopulateListBoxes()
+        {
+            checkedListBox1.Items.Clear();
+            checkedListBox2.Items.Clear();
+
+            foreach (Character character in Character.characterList)
+            {
+                checkedListBox1.Items.Add(character.Name);
+                checkedListBox2.Items.Add(character.Name);
+            }
         }
     }
 }
