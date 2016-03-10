@@ -32,7 +32,19 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         public List<Critter> CritterQuery(string speciesName)
         {
             /* YOUR CODE HERE */
-            throw new NotImplementedException();    // Remove after you write the method
+            List<Critter> matchingCritters = new List<Critter>();
+
+            foreach (Critter critter in critterList)
+            {
+                if ((String)critter.Name == speciesName)
+                {
+                    matchingCritters.Add(critter);
+                }
+                else
+                    MessageBox.Show("There are no critters that match that species.");
+            }
+
+            return matchingCritters;
         }
 
 
