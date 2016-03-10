@@ -9,7 +9,7 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
     class TextDisplay: IDisplay
     {
         /* YOUR CODE HERE */
-        private ListBox listBox;
+        public static ListBox listBox;
 
         public TextDisplay(ListBox listbox)
         {
@@ -18,12 +18,15 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
 
         public void displayCritterList(List<Critter> critterList)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < critterList.Count; i++)
+            {
+                listBox.Items.Add(critterList[i].Name + " the " + critterList[i].Species); 
+            }
         }
 
         public void clearDisplay()
         {
-            throw new NotImplementedException();
+            listBox.Items.Clear();
         }
     }
 }

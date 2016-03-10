@@ -10,7 +10,7 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
     class PictureDisplay: IDisplay
     {
        /* YOUR CODE HERE */
-        List<PictureBox> PictureBoxList;
+        public static List<PictureBox> PictureBoxList;
 
         public PictureDisplay (List<PictureBox> pictureBoxList)
         {
@@ -18,12 +18,19 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         }
         public void displayCritterList(List<Critter> critterList)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < critterList.Count; i++)
+            {
+                PictureBoxList[i].Load(critterList[i].ImageFileName);  
+            }
         }
 
         public void clearDisplay()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < PictureBoxList.Count; i++)
+            {
+                PictureBoxList[i].Image = null;
+            }
+            
         }
     }
 }
