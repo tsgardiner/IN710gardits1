@@ -35,6 +35,8 @@ namespace EncryptionTool
             }
 
             string encrptedText = newEncryption.PlainTextToCypher(textToEncrypt);
+
+            Display(textToEncrypt, encrptedText);
         }
 
         private void btnDecrypt_Click(object sender, EventArgs e)
@@ -50,7 +52,15 @@ namespace EncryptionTool
                 newEncryption.encryptionType = new ReverseEncryption();
             }
 
-            string encrptedText = newEncryption.CypherToText(textToDecrypt);
+            string decrptedText = newEncryption.CypherToText(textToDecrypt);
+
+            Display(decrptedText, textToDecrypt);
+        } 
+
+        private void Display(string plainText, string cryptedText)
+        {
+            tbInput.Text = plainText;
+            tbOutput.Text = cryptedText;
         }
     }
 }
