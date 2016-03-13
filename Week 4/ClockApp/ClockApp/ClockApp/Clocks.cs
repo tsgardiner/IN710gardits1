@@ -3,64 +3,81 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ClockApp
 {
     public class DigitalClock : IClock
     {
+        Timer timer;
+        Label lbDigitalDisplay;
+
+        public DigitalClock(Timer timer, Label lbDigitalDisplay)
+        {
+            this.timer = timer;
+            this.lbDigitalDisplay = lbDigitalDisplay;
+        }
 
         public void On()
         {
-            throw new NotImplementedException();
+            timer.Start();
         }
 
         public void Off()
         {
-            throw new NotImplementedException();
+            timer.Stop();
         }
 
         public void UpdateTimeDisplay()
         {
-            throw new NotImplementedException();
+            lbDigitalDisplay.Text = DateTime.Now.ToLongTimeString();
         }
 
         public void ShowClock()
         {
-            throw new NotImplementedException();
+            lbDigitalDisplay.Visible = true;
         }
 
         public void HideClock()
         {
-            throw new NotImplementedException();
+            lbDigitalDisplay.Visible = false;
         }
     }
 
     public class AnalogClock : IClock
     {
+        AnalogClockControl.AnalogClock analogClock;
+        Timer timer;
 
+        public AnalogClock(Timer timer, AnalogClockControl.AnalogClock analogClock)
+        {
+            this.timer = timer;
+            this.analogClock = analogClock;            
+        }
+        
         public void On()
         {
-            throw new NotImplementedException();
+            analogClock.Start();
         }
 
         public void Off()
         {
-            throw new NotImplementedException();
+            analogClock.Stop();
         }
 
         public void UpdateTimeDisplay()
         {
-            throw new NotImplementedException();
+            //Not needed. I'm guessing it gets the system time itself.
         }
 
         public void ShowClock()
         {
-            throw new NotImplementedException();
+            analogClock.Visible = true;
         }
 
         public void HideClock()
         {
-            throw new NotImplementedException();
+            analogClock.Visible = false;
         }
     }
 }
