@@ -12,6 +12,10 @@ namespace AnimalWorld
 {
     public partial class Form1 : Form
     {
+        private const int ANIMALTYPES = 3;
+        Random randomGen;
+        Graphics canvas;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,17 +23,24 @@ namespace AnimalWorld
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            randomGen = new Random();
+            canvas = this.CreateGraphics();
         }
 
         private void btnAus_Click(object sender, EventArgs e)
         {
-
+            rtDisplay.Clear();
+            canvas.Clear(SystemColors.Control);
+            Continent aus = new Australia(rtDisplay, randomGen, ANIMALTYPES, canvas);
+            aus.RunSimulation();
         }
 
         private void btnNorthAmerica_Click(object sender, EventArgs e)
         {
-
+            rtDisplay.Clear();
+            canvas.Clear(SystemColors.Control);
+            Continent northA = new NorthAmerica(rtDisplay, randomGen, ANIMALTYPES, canvas);
+            northA.RunSimulation();
         }
     }
 }

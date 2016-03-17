@@ -35,7 +35,7 @@
             // 
             // rtDisplay
             // 
-            this.rtDisplay.Location = new System.Drawing.Point(393, 12);
+            this.rtDisplay.Location = new System.Drawing.Point(476, 12);
             this.rtDisplay.Name = "rtDisplay";
             this.rtDisplay.Size = new System.Drawing.Size(552, 596);
             this.rtDisplay.TabIndex = 0;
@@ -43,7 +43,7 @@
             // 
             // btnNorthAmerica
             // 
-            this.btnNorthAmerica.Location = new System.Drawing.Point(789, 642);
+            this.btnNorthAmerica.Location = new System.Drawing.Point(890, 657);
             this.btnNorthAmerica.Name = "btnNorthAmerica";
             this.btnNorthAmerica.Size = new System.Drawing.Size(138, 47);
             this.btnNorthAmerica.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // btnAus
             // 
-            this.btnAus.Location = new System.Drawing.Point(393, 642);
+            this.btnAus.Location = new System.Drawing.Point(476, 657);
             this.btnAus.Name = "btnAus";
             this.btnAus.Size = new System.Drawing.Size(138, 47);
             this.btnAus.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 725);
+            this.ClientSize = new System.Drawing.Size(1072, 746);
             this.Controls.Add(this.btnAus);
             this.Controls.Add(this.btnNorthAmerica);
             this.Controls.Add(this.rtDisplay);

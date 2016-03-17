@@ -11,10 +11,10 @@ namespace AnimalWorld
     {
         public Bison()
         {
-            name = " ";
-            family = " ";
-            food = " ";
-            image = new Bitmap(" ");
+            name = "Bison";
+            family = "Herbivore";
+            food = "Grass";
+            image = new Bitmap("images/bison.jpg");
         }
     }
 
@@ -22,10 +22,10 @@ namespace AnimalWorld
     {
         public Wolf()
         {
-            name = " ";
-            family = " ";
-            food = " ";
-            image = new Bitmap(" ");
+            name = "Wolf";
+            family = "Canine";
+            food = "Meat";
+            image = new Bitmap("images/wolf.jpg");
         }
     }
 
@@ -33,10 +33,10 @@ namespace AnimalWorld
     {
         public Eagle()
         {
-            name = " ";
-            family = " ";
-            food = " ";
-            image = new Bitmap(" ");
+            name = "Eagle";
+            family = "Accipitridae";
+            food = "Meat";
+            image = new Bitmap("images/eagle.jpg");
         }
     }
 
@@ -44,10 +44,10 @@ namespace AnimalWorld
     {
         public Koala()
         {
-            name = " ";
-            family = " ";
-            food = " ";
-            image = new Bitmap(" ");
+            name = "Koala";
+            family = "Phascolarctidae";
+            food = "Eucalyptus";
+            image = new Bitmap("images/koala.jpg");
         }
     }
 
@@ -55,10 +55,10 @@ namespace AnimalWorld
     {
         public Crocodile()
         {
-            name = " ";
-            family = " ";
-            food = " ";
-            image = new Bitmap(" ");
+            name = "Crocodile";
+            family = "Reptile";
+            food = "Meat";
+            image = new Bitmap("images/crocodile.jpg");
         }
     }
 
@@ -66,10 +66,10 @@ namespace AnimalWorld
     {
         public Kangaroo()
         {
-            name = " ";
-            family = " ";
-            food = " ";
-            image = new Bitmap(" ");
+            name = "Kangaroo";
+            family = "Macropodidae";
+            food = "Grass";
+            image = new Bitmap("images/kangaroo.jpg");
         }
     }
 

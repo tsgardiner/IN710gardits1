@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AnimalWorld
 {
-    class Animal
+    public class Animal
     {
         protected string name;
         protected string family;
