@@ -36,7 +36,7 @@ namespace AnimalWorld
                 currentAnimal = animalFactory.createAnimal(animalChoice);
 
                 displayBox.AppendText(currentAnimal.ToString());
-                canvas.DrawImage(currentAnimal.Image, 20, 20 + (i * 120));
+                canvas.DrawImage(currentAnimal.Image, 10, 10 + (i * 200));
             }
 
         }

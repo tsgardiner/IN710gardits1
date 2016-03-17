@@ -21,9 +21,11 @@ namespace AnimalWorld
 
         public override string ToString()
         {
-            string displayString = "I am " + name;
-            displayString += ". I'm a " + family;
-            displayString += ". I eat " + food + ".";
+            string displayString;
+            displayString = "I am " + name + "." + "\n";
+            displayString += "I'm a " + family + "\n";
+            displayString += "I eat " + food + "." + "\n";
+            displayString += "\n";
             return displayString;
         }
 
