@@ -25,4 +25,13 @@ namespace AnimalWorld
             animalFactory = new  AustralianAnimalFactory();
         }
     }
+
+    public class Africa : Continent
+    {
+        public Africa(RichTextBox displayBox, Random randomGen, int nAnimalTypes, Graphics canvas)
+            : base(displayBox, randomGen, nAnimalTypes, canvas)
+        {
+            animalFactory = new AfricanAnimalFactory();
+        }
+    }
 }

@@ -42,5 +42,13 @@ namespace AnimalWorld
             Continent northA = new NorthAmerica(rtDisplay, randomGen, ANIMALTYPES, canvas);
             northA.RunSimulation();
         }
+
+        private void btnAfrica_Click(object sender, EventArgs e)
+        {
+            rtDisplay.Clear();
+            canvas.Clear(SystemColors.Control);
+            Continent africa = new Africa(rtDisplay, randomGen, ANIMALTYPES, canvas);
+            africa.RunSimulation();
+        }
     }
 }

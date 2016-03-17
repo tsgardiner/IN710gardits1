@@ -95,5 +95,49 @@ namespace AnimalWorld
         }
     }
 
+    public class Elephant : Animal
+    {
+        public Elephant()
+        {
+            name = "Elephant";
+            family = "Herbivore";
+            food = "Grass";
+            image = new Bitmap("images/elephant.jpg");
+        }
+    }
+
+    public class Lion : Animal
+    {
+        public Lion()
+        {
+            name = "Lion";
+            family = "Cat";
+            food = "Meat";
+            image = new Bitmap("images/lion.jpg");
+        }
+    }
+
+    public class Zebra : Animal
+    {
+        public Zebra()
+        {
+            name = "Zebra";
+            family = "Herbivore";
+            food = "Grass";
+            image = new Bitmap("images/zebra.jpg");
+        }
+    }
+
+    public class Giraffe : Animal
+    {
+        public Giraffe()
+        {
+            name = "Giraffe";
+            family = "Herbivore";
+            food = "Grass";
+            image = new Bitmap("images/giraffe.jpg");
+        }
+    }
+
 
 }

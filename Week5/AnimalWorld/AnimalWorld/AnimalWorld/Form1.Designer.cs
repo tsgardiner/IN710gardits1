@@ -31,6 +31,7 @@
             this.rtDisplay = new System.Windows.Forms.RichTextBox();
             this.btnNorthAmerica = new System.Windows.Forms.Button();
             this.btnAus = new System.Windows.Forms.Button();
+            this.btnAfrica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtDisplay
@@ -61,11 +62,22 @@
             this.btnAus.UseVisualStyleBackColor = true;
             this.btnAus.Click += new System.EventHandler(this.btnAus_Click);
             // 
+            // btnAfrica
+            // 
+            this.btnAfrica.Location = new System.Drawing.Point(677, 657);
+            this.btnAfrica.Name = "btnAfrica";
+            this.btnAfrica.Size = new System.Drawing.Size(138, 47);
+            this.btnAfrica.TabIndex = 3;
+            this.btnAfrica.Text = "Africa";
+            this.btnAfrica.UseVisualStyleBackColor = true;
+            this.btnAfrica.Click += new System.EventHandler(this.btnAfrica_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 746);
+            this.Controls.Add(this.btnAfrica);
             this.Controls.Add(this.btnAus);
             this.Controls.Add(this.btnNorthAmerica);
             this.Controls.Add(this.rtDisplay);
@@ -81,6 +93,7 @@
         private System.Windows.Forms.RichTextBox rtDisplay;
         private System.Windows.Forms.Button btnNorthAmerica;
         private System.Windows.Forms.Button btnAus;
+        private System.Windows.Forms.Button btnAfrica;
     }
 }
 
