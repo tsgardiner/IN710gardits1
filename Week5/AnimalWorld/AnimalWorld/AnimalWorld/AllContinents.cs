@@ -20,7 +20,7 @@ namespace AnimalWorld
     public class Australia : Continent
     {
         public Australia(RichTextBox displayBox, Random randomGen, int nAnimalTypes, Graphics canvas)
-            : base(displayBox, randomGen, nAnimalTypes, canvas)
+            :base(displayBox, randomGen, nAnimalTypes, canvas)
         {
             animalFactory = new  AustralianAnimalFactory();
         }

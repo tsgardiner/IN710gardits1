@@ -73,5 +73,27 @@ namespace AnimalWorld
         }
     }
 
+    public class BrownSnake : Animal
+    {
+        public BrownSnake()
+        {
+            name = "Brown Snake";
+            family = "Reptile";
+            food = "Mice";
+            image = new Bitmap("images/brownsnake.jpg");
+        }
+    }
+
+    public class Moose : Animal
+    {
+        public Moose()
+        {
+            name = "Moose";
+            family = "Herbivore";
+            food = "Grass";
+            image = new Bitmap("images/moose.jpg");
+        }
+    }
+
 
 }

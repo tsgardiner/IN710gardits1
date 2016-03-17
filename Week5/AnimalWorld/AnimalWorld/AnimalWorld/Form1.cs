@@ -12,7 +12,7 @@ namespace AnimalWorld
 {
     public partial class Form1 : Form
     {
-        private const int ANIMALTYPES = 3;
+        private const int ANIMALTYPES = 4;
         Random randomGen;
         Graphics canvas;
 

@@ -26,7 +26,10 @@ namespace AnimalWorld
                     break;
                 case 2:
                     newAnimal = new Eagle();
-                    break;                   
+                    break;
+                case 3:
+                    newAnimal = new Moose();
+                    break; 
             }
             return newAnimal;
         }
@@ -53,6 +56,9 @@ namespace AnimalWorld
                     break;
                 case 2:
                     newAnimal = new Koala();
+                    break;
+                case 3:
+                    newAnimal = new BrownSnake();
                     break;
             }
             return newAnimal;
