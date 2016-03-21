@@ -6,21 +6,43 @@ using System.Threading.Tasks;
 
 namespace CustomPCBuilder
 {
-    public class CPU : Component
+    public abstract class CPU : Component
     {
-        public CPU(string name, double price)
-            :base(name, price)
-        {
-            
-        }
+        protected string cores;
+        protected double ghz;
+
     }
 
     public class GamingCPU : CPU
     {
-        public GamingCPU(string name, double price)
-            :base(name, price)
+        public GamingCPU()
         {
+            name = "i7 4790K";
+            price = 500;
+            cores = "Quad";
+            ghz = 4.8;                        
+        }
+    }
 
+    public class BusinessCPU : CPU
+    {
+        public BusinessCPU()
+        {
+            name = "i5 4690";
+            price = 300;
+            cores = "Quad";
+            ghz = 3.9f;                      
+        }
+    }
+
+    public class MultimediaCPU : CPU
+    {
+        public MultimediaCPU()
+        {
+            name = "i3 4330";
+            price = 150;
+            cores = "Dual";
+            ghz = 3.5f;                        
         }
     }
 

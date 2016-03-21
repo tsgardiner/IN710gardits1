@@ -11,10 +11,5 @@ namespace CustomPCBuilder
         protected double price;
         protected string name;
 
-        public Component(string name, double price)
-        {
-            this.name = name;
-            this.price = price;
-        }
     }
 }
