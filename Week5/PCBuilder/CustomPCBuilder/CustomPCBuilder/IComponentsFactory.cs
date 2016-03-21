@@ -11,5 +11,6 @@ namespace CustomPCBuilder
         CPU createCPU();
         GPU createGPU();
         RAM createRAM();
+        Monitor createMonitor();     
     }
 }

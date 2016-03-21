@@ -14,6 +14,7 @@ namespace CustomPCBuilder
         GPU gpu = null;
         CPU cpu = null;
         RAM ram = null;
+        Monitor monitor = null;
         
         public CPU createCPU()
         {
@@ -29,6 +30,11 @@ namespace CustomPCBuilder
         {
             return ram = new GamingRAM();
         }
+
+        public Monitor createMonitor()
+        {
+            return monitor = new GamingMonitor();
+        }
     }
 
     public class BusinessFactory : IComponentsFactory
@@ -36,6 +42,7 @@ namespace CustomPCBuilder
         GPU gpu = null;
         CPU cpu = null;
         RAM ram = null;
+        Monitor monitor = null;
 
         public CPU createCPU()
         {
@@ -51,6 +58,11 @@ namespace CustomPCBuilder
         {
             return ram = new BusinessRAM();
         }
+        
+        public Monitor createMonitor()
+        {
+            return monitor = new BusinessMonitor();
+        }
     }
 
     public class MultimediaFactory : IComponentsFactory
@@ -58,6 +70,7 @@ namespace CustomPCBuilder
         GPU gpu = null;
         CPU cpu = null;
         RAM ram = null;
+        Monitor monitor = null;
 
         public CPU createCPU()
         {
@@ -72,6 +85,10 @@ namespace CustomPCBuilder
         public RAM createRAM()
         {
             return ram = new MultimediaRAM();
+        }
+        public Monitor createMonitor()
+        {
+            return monitor = new MultimediaMonitor();
         }
     }
 }
