@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace CustomPCBuilder
 {
-    class Machines
+    public class Machines
     {
+        protected double totalPrice;
+        protected string name;
+        protected IComponetsFactory componentsFactoy;
+
+        public Machines(string name, double totalPrice, IComponetsFactory componentsFactory)
+        {
+            this.name = name;
+            this.totalPrice = totalPrice;
+        }
     }
 }

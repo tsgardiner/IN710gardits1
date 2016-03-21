@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace CustomPCBuilder
 {
-    class CPU
+    public class CPU : Component
     {
+        public CPU(string name, double price)
+            :base(name, price)
+        {
+            
+        }
     }
+
+    public class GamingCPU : CPU
+    {
+        public GamingCPU(string name, double price)
+            :base(name, price)
+        {
+
+        }
+    }
+
 }

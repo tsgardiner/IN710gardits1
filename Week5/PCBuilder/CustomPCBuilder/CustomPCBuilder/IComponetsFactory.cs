@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CustomPCBuilder
 {
-    interface ICompoentsFactory
+    public interface IComponetsFactory
     {
+        CPU createCPU();
+        GPU createGPU();
+        RAM createRAM();
     }
 }
