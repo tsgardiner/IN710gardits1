@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace CustomPCBuilder
 {
-    public class GPU : Component
+    public abstract class GPU : Component
     {
         protected string dedicatedMemory;
+
+        public override string ToString()
+        {
+            return price.ToString() + "\t" + name + " " + dedicatedMemory + " memory";
+        }
 
     }
 

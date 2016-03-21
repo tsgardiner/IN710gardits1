@@ -10,6 +10,10 @@ namespace CustomPCBuilder
     {
         protected double price;
         protected string name;
+        public double Price
+        {
+            get { return price; }
+        }
 
     }
 }

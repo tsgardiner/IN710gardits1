@@ -8,7 +8,7 @@ namespace CustomPCBuilder
 {
     
 
-    public class GamingFactory : IComponetsFactory
+    public class GamingFactory : IComponentsFactory
     {
 
         GPU gpu = null;
@@ -31,7 +31,7 @@ namespace CustomPCBuilder
         }
     }
 
-    public class BusinessFactory : IComponetsFactory
+    public class BusinessFactory : IComponentsFactory
     {
         GPU gpu = null;
         CPU cpu = null;
@@ -53,7 +53,7 @@ namespace CustomPCBuilder
         }
     }
 
-    public class MultimediaFactory : IComponetsFactory
+    public class MultimediaFactory : IComponentsFactory
     {
         GPU gpu = null;
         CPU cpu = null;

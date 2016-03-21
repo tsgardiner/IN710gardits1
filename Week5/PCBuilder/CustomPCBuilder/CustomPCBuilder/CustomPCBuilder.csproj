@@ -54,8 +54,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GPU.cs" />
-    <Compile Include="IComponetsFactory.cs" />
-    <Compile Include="Machines.cs" />
+    <Compile Include="IComponentsFactory.cs" />
+    <Compile Include="MachineSpecPrinter.cs" />
     <Compile Include="RAM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

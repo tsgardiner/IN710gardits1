@@ -11,6 +11,11 @@ namespace CustomPCBuilder
         protected string cores;
         protected double ghz;
 
+        public override string ToString()
+        {
+            return price.ToString() +"\t"+ name +" "+ cores +" core at " + ghz + " GHz";
+        }
+
     }
 
     public class GamingCPU : CPU
@@ -31,7 +36,7 @@ namespace CustomPCBuilder
             name = "i5 4690";
             price = 300;
             cores = "Quad";
-            ghz = 3.9f;                      
+            ghz = 3.9;                      
         }
     }
 
@@ -42,7 +47,7 @@ namespace CustomPCBuilder
             name = "i3 4330";
             price = 150;
             cores = "Dual";
-            ghz = 3.5f;                        
+            ghz = 3.5;                        
         }
     }
 
