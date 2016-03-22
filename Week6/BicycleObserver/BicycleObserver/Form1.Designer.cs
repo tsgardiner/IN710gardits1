@@ -126,6 +126,7 @@
             this.Controls.Add(this.btnChangeSpeed);
             this.Name = "Form1";
             this.Text = "Bicyle";
+        
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,22 +8,37 @@ namespace BicycleObserver
 {
     public class BicycleSubject : ISubject
     {
-        List<BicycleObserver> bicycleList = new List<BicycleObserver>();
+        List<IObserver> bicycleList;
         int data;
+
+        public int Data
+        {
+            get { return data; }
+            set { data = value; }
+        }
+
+        public BicycleSubject(int data)
+        {
+            bicycleList = new List<IObserver>();
+            this.data = data;
+        }
 
         public void AddObserver(IObserver o)
         {
-            throw new NotImplementedException();
+            bicycleList.Add(o);
         }
 
         public void RemoveObserver(IObserver o)
         {
-            throw new NotImplementedException();
+            bicycleList.Remove(o);
         }
 
         public void NotifyObservers()
         {
-            throw new NotImplementedException();
+            foreach (BicycleObserver item in bicycleList)
+            {
+                item.Update(data);
+            }
         }
     }
 }

@@ -19,17 +19,16 @@ namespace BicycleObserver
             this.displaylabel = displayLabel;
             currentRPM = 0;
             this.bicycleSubject = bicycleSubject;
-            currentValue = 0; 
+            currentValue = 0;
+
+            bicycleSubject.AddObserver(this);
         }
 
-        public abstract void Update(int data)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Update(int data);
 
         public void Display()
         {
-            displaylabel.Text = currentValue.ToString();
+            displaylabel.Text = currentValue.ToString("F2");
         }
     }
 }

@@ -12,13 +12,14 @@ namespace BicycleObserver
         public RPMObserver(Label displayLabel, BicycleSubject bicycleSubject)
             :base(displayLabel, bicycleSubject)
         {
-            
+               
         }
 
         public override void Update(int data)
         {
             currentValue = data;
             currentRPM = data;
+            Display();
         }
     }
 
@@ -33,7 +34,9 @@ namespace BicycleObserver
 
         public override void Update(int data)
         {
-            
+            currentRPM = data;
+            currentValue = 5 * currentRPM;
+            Display();
         }
     }
 
@@ -47,7 +50,9 @@ namespace BicycleObserver
 
         public override void Update(int data)
         {
-            throw new NotImplementedException();
+            currentRPM = data;
+            currentValue = currentRPM * 205; //Not correct 
+            Display();
         }
     }
 }
