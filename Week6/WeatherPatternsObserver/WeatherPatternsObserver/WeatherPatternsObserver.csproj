@@ -50,10 +50,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HumidityObserver.cs" />
+    <Compile Include="ForecastObserver.cs" />
     <Compile Include="ISubject.cs" />
     <Compile Include="IWeatherObserver.cs" />
-    <Compile Include="PressureObserver.cs" />
+    <Compile Include="AveragesObserver.cs" />
     <Compile Include="TemperatureObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

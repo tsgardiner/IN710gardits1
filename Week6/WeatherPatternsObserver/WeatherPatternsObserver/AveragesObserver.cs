@@ -7,10 +7,9 @@ using System.Windows.Forms;
 
 namespace WeatherPatternsObserver
 {
-    public class TemperatureObserver : WeatherStation
+    public class AveragesObserver : WeatherStation
     {
-
-        public TemperatureObserver(RichTextBox displayBox, WeatherSubject weatherSubject)
+        public AveragesObserver(RichTextBox displayBox, WeatherSubject weatherSubject)
             :base(displayBox, weatherSubject)
         {
 
@@ -18,17 +17,17 @@ namespace WeatherPatternsObserver
 
         public override void updateTemperature(int temperatureData)
         {
-            currentTemperature = temperatureData;
+            currentTemperature = temperatureData + 2; //I dunno what average exactly.
         }
 
         public override void updateHumidity(int humidityData)
         {
-            currentHumidity = humidityData;
+            currentHumidity = humidityData - 2;
         }
 
         public override void updatePressure(int pressureData)
         {
-            currentPressure = pressureData;
+            currentPressure = pressureData + 50;
         }
 
         public override void Display()
@@ -38,7 +37,4 @@ namespace WeatherPatternsObserver
             displayBox.Text += "Pressure:\t" + currentPressure + "\n";
         }
     }
-
-
-        
 }
