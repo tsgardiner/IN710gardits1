@@ -35,6 +35,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.btnGo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -47,7 +48,7 @@
             this.groupBox1.Controls.Add(this.rbSpinBox);
             this.groupBox1.Location = new System.Drawing.Point(29, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(126, 157);
+            this.groupBox1.Size = new System.Drawing.Size(107, 157);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Indicators";
@@ -106,11 +107,22 @@
             this.trackBar1.Size = new System.Drawing.Size(332, 45);
             this.trackBar1.TabIndex = 2;
             // 
+            // btnGo
+            // 
+            this.btnGo.Location = new System.Drawing.Point(150, 27);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(57, 147);
+            this.btnGo.TabIndex = 4;
+            this.btnGo.Text = "Go";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 192);
+            this.Controls.Add(this.btnGo);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.progressBar1);
@@ -136,6 +148,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button btnGo;
     }
 }
 
