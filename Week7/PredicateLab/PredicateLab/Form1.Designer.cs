@@ -92,6 +92,7 @@
             this.Controls.Add(this.lbDisplaySelected);
             this.Controls.Add(this.lbRandoms);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Predicate Lab";
             this.ResumeLayout(false);
 
