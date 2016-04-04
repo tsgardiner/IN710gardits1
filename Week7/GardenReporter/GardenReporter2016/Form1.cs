@@ -20,7 +20,7 @@ namespace GardenReporter2016
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            gardenManager = new GardenManager();
+            gardenManager = new GardenManager(listBox1);
             populateDummyData();
         }
 
@@ -47,12 +47,12 @@ namespace GardenReporter2016
 
         private void btnArea_Click(object sender, EventArgs e)
         {
-            /* YOUR CODE HERE */
+            gardenManager.ProcessGardens(new GardenManager.DGarden(Reports.GardenArea));
         }
 
         private void btnCharges_Click(object sender, EventArgs e)
         {
-            /* YOUR CODE HERE */
+            gardenManager.ProcessGardens(new GardenManager.DGarden(Reports.GardenBalanceOwing));
         }
     }
 }
