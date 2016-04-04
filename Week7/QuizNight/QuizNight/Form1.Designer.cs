@@ -34,8 +34,8 @@
             this.btnScore = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbCorrectAns = new System.Windows.Forms.TextBox();
+            this.tbIncorrectAns = new System.Windows.Forms.TextBox();
             this.lbScore = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -101,19 +101,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Incorrect Answers";
             // 
-            // textBox1
+            // tbCorrectAns
             // 
-            this.textBox1.Location = new System.Drawing.Point(259, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.tbCorrectAns.Location = new System.Drawing.Point(259, 51);
+            this.tbCorrectAns.Name = "tbCorrectAns";
+            this.tbCorrectAns.Size = new System.Drawing.Size(100, 20);
+            this.tbCorrectAns.TabIndex = 4;
             // 
-            // textBox2
+            // tbIncorrectAns
             // 
-            this.textBox2.Location = new System.Drawing.Point(259, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.tbIncorrectAns.Location = new System.Drawing.Point(259, 95);
+            this.tbIncorrectAns.Name = "tbIncorrectAns";
+            this.tbIncorrectAns.Size = new System.Drawing.Size(100, 20);
+            this.tbIncorrectAns.TabIndex = 5;
             // 
             // lbScore
             // 
@@ -131,13 +131,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 159);
             this.Controls.Add(this.lbScore);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbIncorrectAns);
+            this.Controls.Add(this.tbCorrectAns);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnScore);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz Scorer";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -154,8 +155,8 @@
         private System.Windows.Forms.RadioButton rbChild;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbCorrectAns;
+        private System.Windows.Forms.TextBox tbIncorrectAns;
         private System.Windows.Forms.Label lbScore;
     }
 }
