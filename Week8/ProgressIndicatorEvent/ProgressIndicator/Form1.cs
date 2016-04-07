@@ -13,9 +13,10 @@ namespace ProgressIndicator
 {
     public partial class Form1 : Form
     {
-        const int NUM_OF_STEPS = 10;
-        public delegate void DFeedBack();
-        DFeedBack dfeedback;        
+        
+        public delegate void DFeedBack(object subject, EventArgs e);
+        DFeedBack dfeedback;
+        ProgressSubject slowWorker;
 
         public Form1()
         {
@@ -24,42 +25,12 @@ namespace ProgressIndicator
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            if (rbProgressBar.Checked)
-                dfeedback = new DFeedBack(updateProgressBar);
-            if (rbSpinBox.Checked)
-                dfeedback = new DFeedBack(updateSpinBox);
-            if (rbTrackBar.Checked)
-                dfeedback = new DFeedBack(updateTrackBar);
-
-            slowMethod(dfeedback);            
+            slowWorker.SlowMethod();           
         }
 
-        public void slowMethod(DFeedBack dfeedback)
-        {
-            int count = 0;
-            while (count != NUM_OF_STEPS)
-            {
-               Thread.Sleep(500); 
-               dfeedback();
-               count++;
-            }            
-        }
+        
 
-        public void updateSpinBox()
-        {            
-            numericUpDown1.Value++;
-            Application.DoEvents();
-        }
-
-        public void updateProgressBar()
-        {
-            progressBar1.PerformStep();
-        }
-
-        public void updateTrackBar()
-        {
-            trackBar1.Value++;
-        }
+        
 
        
     }
