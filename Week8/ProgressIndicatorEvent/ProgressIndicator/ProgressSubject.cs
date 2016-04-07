@@ -4,14 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProgressIndicator
 {
     public class ProgressSubject
     {
         const int NUM_OF_STEPS = 10;
+        Button button;
 
-        public ProgressSubject()
+        public ProgressSubject(Button button)
+        {
+            this.button = button;
+
+            button.Click += new EventHandler(OnUpdateEvent);
+        }
+
+        public void OnUpdateEvent(object subject, EventArgs e)
         {
 
         }
