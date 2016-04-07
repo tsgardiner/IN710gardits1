@@ -13,8 +13,8 @@ namespace CustomHandlers
     public partial class Form1 : Form
     {
 
-        CustomHandler firstHandler;
-        CustomHandler secondHandler;        
+        FirstHandler firstHandler;
+        SecondHandler secondHandler;        
 
         public Form1()
         {

@@ -14,6 +14,7 @@ namespace FireAlarmLab
     {
         FireAlarmSubject fireAlarmSubject;
         InstructionsObserver fireInstructions;
+        BeepObserver beepObserver;
         EFireCategory selectedCat;
 
         public Form1()
@@ -25,6 +26,7 @@ namespace FireAlarmLab
         {
             fireAlarmSubject = new FireAlarmSubject();
             fireInstructions = new InstructionsObserver(fireAlarmSubject);
+            beepObserver = new BeepObserver(fireAlarmSubject);
         }
 
         private void rbFireAlarm_Click(object sender, EventArgs e)
