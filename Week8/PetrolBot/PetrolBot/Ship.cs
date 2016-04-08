@@ -31,20 +31,29 @@ namespace PetrolBot
             this.shipCanvas = shipCanvas;
             this.shipColour = shipColour;
             this.shipSize = shipSize;
-            this.shipLocation = shipLocation;
+            ShipLocation = shipLocation;
 
             rGen = new Random();
             shipBrush = new SolidBrush(shipColour);
         }
 
+        public void ShipCyle()
+        {
+            DrawShip();
+            MoveShip();
+            UsePetrol(); 
+        }
+
         public void DrawShip()
         {
-            shipCanvas.FillRectangle(shipBrush, shipLocation.X, shipLocation.Y, shipSize, shipSize);    
+            shipCanvas.Clear(SystemColors.Control);
+            shipCanvas.FillRectangle(shipBrush, ShipLocation.X, ShipLocation.Y, shipSize, shipSize);    
         }
 
         public void MoveShip()
         {
-
+            shipLocation.X++;
+            shipLocation.Y++;
         }
 
         public void OnFullOfFuelEvent()
@@ -59,7 +68,7 @@ namespace PetrolBot
 
         public void Refuel()
         {
-
+            Petrol++;
         }
 
         public void UsePetrol()

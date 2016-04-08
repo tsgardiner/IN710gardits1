@@ -13,6 +13,9 @@ namespace PetrolBot
     public partial class Form1 : Form
     {
 
+        List<Ship> shipList;
+        List<PetrolBot> botList;
+
         Graphics canvas;
         Ship ship;
         Point position;
@@ -32,7 +35,7 @@ namespace PetrolBot
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ship.DrawShip();
+            ship.ShipCyle();
         }
     }
 }
