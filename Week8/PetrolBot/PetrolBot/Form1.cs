@@ -13,12 +13,14 @@ namespace PetrolBot
     public partial class Form1 : Form
     {
 
+        
         List<Ship> shipList;
         List<PetrolBot> botList;
 
         Graphics canvas;
         Ship ship;
-        Point position;
+        PetrolBot bot;
+        Point shipPosition, botPosition;
 
         public Form1()
         {
@@ -28,14 +30,17 @@ namespace PetrolBot
         private void Form1_Load(object sender, EventArgs e)
         {
             canvas = CreateGraphics();
-            position = new Point(50, 50);
-            ship = new Ship(canvas, Color.Blue, position, 50);
+            shipPosition = new Point(50, 50);
+            botPosition = new Point(50, 420);
+            bot = new PetrolBot(canvas, Color.Red, botPosition, 20);
+            ship = new Ship(canvas, Color.Red, shipPosition, 50);
             timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ship.ShipCyle();
+            ship.ShipCycle();
+            bot.DrawBot();
         }
     }
 }

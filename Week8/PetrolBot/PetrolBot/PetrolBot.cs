@@ -31,7 +31,7 @@ namespace PetrolBot
 
         public void DrawBot()
         {
-            botCanvas.FillEllipse(botBrush, botLocation.X, botLocation.Y, botSize, botSize);
+            botCanvas.FillEllipse(botBrush, waitingLocation.X, waitingLocation.Y, botSize, botSize);
         }
     }
 }

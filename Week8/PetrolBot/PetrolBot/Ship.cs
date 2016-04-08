@@ -16,10 +16,10 @@ namespace PetrolBot
         public delegate void FullOfFuelEvent(object subject, ShipEvent se);
         public delegate void OutOfFuelEvent(object subject, ShipEvent se);
 
-        int petrol;         
+        int petrol = PETROL_AMOUNT;         
         Random rGen;
         Graphics shipCanvas;
-        Brush shipBrush;
+        Brush ShipBrush { get; set; } 
         Color shipColour;
         Point shipLocation;
         int shipSize;
@@ -32,28 +32,50 @@ namespace PetrolBot
             this.shipColour = shipColour;
             this.shipSize = shipSize;
             ShipLocation = shipLocation;
+            shipState = EShipState.Wandering;
 
             rGen = new Random();
-            shipBrush = new SolidBrush(shipColour);
+            ShipBrush = new SolidBrush(shipColour);
         }
 
-        public void ShipCyle()
+        public void ShipCycle()
         {
             DrawShip();
-            MoveShip();
-            UsePetrol(); 
+
+            if (Petrol == 0)
+            {
+                shipState = EShipState.Refueling;
+            }
+
+            if (shipState == EShipState.Wandering)
+            {
+                MoveShip();                
+                ShipColourTransition();
+                UsePetrol();
+            }
+           
         }
 
         public void DrawShip()
         {
             shipCanvas.Clear(SystemColors.Control);
-            shipCanvas.FillRectangle(shipBrush, ShipLocation.X, ShipLocation.Y, shipSize, shipSize);    
+            shipCanvas.FillRectangle(ShipBrush, ShipLocation.X, ShipLocation.Y, shipSize, shipSize);    
         }
 
         public void MoveShip()
         {
             shipLocation.X++;
             shipLocation.Y++;
+        }
+
+        public void ShipColourTransition()
+        {
+            
+            double petrolLevel = Petrol / 100.0;
+            double emptyRGB = (255 * petrolLevel);
+            shipColour = Color.FromArgb(255, (int)emptyRGB, 0, 0);
+            ShipBrush = new SolidBrush(shipColour);
+                        
         }
 
         public void OnFullOfFuelEvent()
@@ -73,7 +95,10 @@ namespace PetrolBot
 
         public void UsePetrol()
         {
-            Petrol--;
+            if (Petrol != 0)
+            {
+                Petrol--;  
+            }            
         }
 
         public int Petrol
