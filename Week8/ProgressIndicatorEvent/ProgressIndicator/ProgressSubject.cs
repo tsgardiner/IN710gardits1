@@ -11,18 +11,13 @@ namespace ProgressIndicator
     public class ProgressSubject
     {
         const int NUM_OF_STEPS = 10;
-        Button button;
 
-        public ProgressSubject(Button button)
+        public event EventHandler OnUpdateEvent;
+        public EventArgs e;
+
+        public ProgressSubject()
         {
-            this.button = button;
-
-            button.Click += new EventHandler(OnUpdateEvent);
-        }
-
-        public void OnUpdateEvent(object subject, EventArgs e)
-        {
-
+            e = new EventArgs();
         }
 
         public void SlowMethod()
@@ -32,24 +27,8 @@ namespace ProgressIndicator
             {
                 Thread.Sleep(500);
                 count++;
+                OnUpdateEvent(this, e);
             }
-        }
-
-
-        public void updateSpinBox()
-        {
-            numericUpDown1.Value++;
-            Application.DoEvents();
-        }
-
-        public void updateProgressBar()
-        {
-            progressBar1.PerformStep();
-        }
-
-        public void updateTrackBar()
-        {
-            trackBar1.Value++;
         }
     }
 }
