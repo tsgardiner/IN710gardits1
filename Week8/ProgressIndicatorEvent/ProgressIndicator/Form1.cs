@@ -43,7 +43,8 @@ namespace ProgressIndicator
         public void UpdateSpinBox(object sender, EventArgs e)
         {
             numericUpDown1.Value++;
-            Application.DoEvents();
+            numericUpDown1.Refresh();
+            //Application.DoEvents();
         }
 
         public void UpdateProgressBar(object sender, EventArgs e)
