@@ -15,6 +15,8 @@ namespace PetrolBot
 
         public delegate void FullOfFuelEvent(object subject, ShipEvent se);
         public delegate void OutOfFuelEvent(object subject, ShipEvent se);
+        public event FullOfFuelEvent fullOfFuel;
+        public event OutOfFuelEvent outOfFuel;
 
         int petrol = PETROL_AMOUNT;         
         Random rGen;
@@ -23,7 +25,7 @@ namespace PetrolBot
         Color shipColour;
         Point shipLocation;
         int shipSize;
-        EShipState shipState;
+        EShipState shipState;        
         int shipVelocity;
 
         public Ship(Graphics shipCanvas, Color shipColour, Point shipLocation, int shipSize)
@@ -42,24 +44,24 @@ namespace PetrolBot
         {
             DrawShip();
 
-            if (Petrol == 0)
-            {
-                shipState = EShipState.Refueling;
-            }
-            else if (Petrol == 100)
-            {
-                shipState = EShipState.Wandering;
-            }
+            //if (Petrol == 0)
+            //{
+            //    ShipState = EShipState.Refueling;
+            //}
+            //else if (Petrol == 100)
+            //{
+            //    ShipState = EShipState.Wandering;
+            //}
 
 
-            if (shipState == EShipState.Wandering)
+            if (ShipState == EShipState.Wandering)
             {
                 MoveShip();                
                 ShipColourTransition();
                 UsePetrol();
             }
 
-            if (shipState == EShipState.Refueling)
+            if (ShipState == EShipState.Refueling)
             {
                 Refuel();
                 ShipColourTransition();
@@ -88,14 +90,24 @@ namespace PetrolBot
             ShipBrush = new SolidBrush(shipColour);               
         }
 
-        public void OnFullOfFuelEvent()
+        public void OnFullOfFuelEvent(Point location)
         {
+            ShipEvent se = new ShipEvent(location);
 
+            if (fullOfFuel != null)
+            {
+                fullOfFuel(this, se);
+            }
         }
 
-        public void OnOutOfFuelEvent()
+        public void OnOutOfFuelEvent(Point location)
         {
+            ShipEvent se = new ShipEvent(location);
 
+            if (outOfFuel != null)
+            {
+                outOfFuel(this, se);
+            }
         }
 
         public void Refuel()
@@ -117,6 +129,11 @@ namespace PetrolBot
         {
             get { return shipLocation; }
             set { shipLocation = value; }
+        }
+        public EShipState ShipState
+        {
+            get { return shipState; }
+            set { shipState = value; }
         }
     }
 }

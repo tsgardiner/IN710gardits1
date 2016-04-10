@@ -32,8 +32,9 @@ namespace PetrolBot
             canvas = CreateGraphics();
             shipPosition = new Point(50, 50);
             botPosition = new Point(50, 420);
-            bot = new PetrolBot(canvas, Color.Red, botPosition, 20);
+            
             ship = new Ship(canvas, Color.Red, shipPosition, 50);
+            bot = new PetrolBot(canvas, Color.Blue, botPosition, 20, ship);
             timer1.Enabled = true;
         }
 
@@ -41,6 +42,13 @@ namespace PetrolBot
         {
             ship.ShipCycle();
             bot.DrawBot();
+
+
+            if (ship.Petrol == 0)
+            {
+                ship.OnOutOfFuelEvent(ship.ShipLocation);
+            }
+            
         }
     }
 }
