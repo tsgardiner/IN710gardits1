@@ -44,16 +44,6 @@ namespace PetrolBot
         {
             DrawShip();
 
-            //if (Petrol == 0)
-            //{
-            //    ShipState = EShipState.Refueling;
-            //}
-            //else if (Petrol == 100)
-            //{
-            //    ShipState = EShipState.Wandering;
-            //}
-
-
             if (ShipState == EShipState.Wandering)
             {
                 MoveShip();                

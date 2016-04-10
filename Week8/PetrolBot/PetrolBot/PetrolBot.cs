@@ -15,7 +15,6 @@ namespace PetrolBot
         Point botLocation;
         Ship botShip;
         Point waitingLocation;
-        Point shipLocation;
         int botSize;
 
         public PetrolBot(Graphics botCanvas, Color botColour, Point botLocation, int botSize, Ship ship)
@@ -31,8 +30,10 @@ namespace PetrolBot
             this.botShip = ship;
 
             Ship.OutOfFuelEvent outOfFuelHandler = new Ship.OutOfFuelEvent(OutOfFuelHandler);
+            Ship.FullOfFuelEvent fullOfFuelHandler = new Ship.FullOfFuelEvent(FullOfFuelHandler);
 
             ship.outOfFuel += outOfFuelHandler;
+            ship.fullOfFuel += fullOfFuelHandler;
         }
 
         public void DrawBot()
@@ -42,8 +43,14 @@ namespace PetrolBot
 
         public void OutOfFuelHandler(object subject, ShipEvent se)
         {
-            botLocation = botShip.ShipLocation;
             botShip.ShipState = EShipState.Refueling;
+            botLocation = botShip.ShipLocation;            
+        }
+
+        public void FullOfFuelHandler(object subject, ShipEvent se)
+        {
+            botShip.ShipState = EShipState.Wandering;
+            botLocation = waitingLocation;            
         }
     }
 }

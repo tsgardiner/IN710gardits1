@@ -43,11 +43,15 @@ namespace PetrolBot
             ship.ShipCycle();
             bot.DrawBot();
 
-
+            if (ship.Petrol == 100)
+            {
+                ship.OnFullOfFuelEvent(ship.ShipLocation);
+            }
             if (ship.Petrol == 0)
             {
                 ship.OnOutOfFuelEvent(ship.ShipLocation);
             }
+            
             
         }
     }
