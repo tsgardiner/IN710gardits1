@@ -46,12 +46,23 @@ namespace PetrolBot
             {
                 shipState = EShipState.Refueling;
             }
+            else if (Petrol == 100)
+            {
+                shipState = EShipState.Wandering;
+            }
+
 
             if (shipState == EShipState.Wandering)
             {
                 MoveShip();                
                 ShipColourTransition();
                 UsePetrol();
+            }
+
+            if (shipState == EShipState.Refueling)
+            {
+                Refuel();
+                ShipColourTransition();
             }
            
         }
@@ -70,12 +81,11 @@ namespace PetrolBot
 
         public void ShipColourTransition()
         {
-            
             double petrolLevel = Petrol / 100.0;
-            double emptyRGB = (255 * petrolLevel);
-            shipColour = Color.FromArgb(255, (int)emptyRGB, 0, 0);
-            ShipBrush = new SolidBrush(shipColour);
-                        
+            double rgb = (255 * petrolLevel);
+            int currentColorValue = (int)rgb;
+            shipColour = Color.FromArgb(255, currentColorValue, 0, 0);
+            ShipBrush = new SolidBrush(shipColour);               
         }
 
         public void OnFullOfFuelEvent()
@@ -95,10 +105,7 @@ namespace PetrolBot
 
         public void UsePetrol()
         {
-            if (Petrol != 0)
-            {
-                Petrol--;  
-            }            
+            Petrol--;              
         }
 
         public int Petrol
