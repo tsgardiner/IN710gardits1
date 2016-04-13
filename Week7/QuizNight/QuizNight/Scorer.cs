@@ -16,15 +16,18 @@ namespace QuizNight
         {
             int score = 0;
 
-            for (int i = 0; i < correct; i++)
-            {
-                score = score + ADULT_POINTS;
-            }
+            //Does the same thing just better.
+            score = (correct * ADULT_POINTS) - incorrect;            
 
-           for (int i = 0; i < incorrect; i++)
-            {
-                score--;
-            }                      
+           // for (int i = 0; i < correct; i++)
+           // {
+           //     score = score + ADULT_POINTS;
+           // }
+
+           //for (int i = 0; i < incorrect; i++)
+           // {
+           //     score--;
+           // }                      
 
             return score;
         }
