@@ -64,7 +64,11 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            var allPaintings = paintings.Select(p => new { p.Title, p.Year, p.Artist, p.Method });
+
+            foreach (var item in allPaintings)            {
+                listBox1.Items.Add(item.Artist + "\t\t" + item.Year + "\t\t" + item.Method + "\t\t" + item.Title);
+            }
         }
 
 
