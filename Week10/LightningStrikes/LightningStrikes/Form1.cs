@@ -16,5 +16,25 @@ namespace LightningStrikes
         {
             InitializeComponent();
         }
+
+        private void btnAvgAllStrikes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThreeLargestFires_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLatLongPicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFireLightning_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
