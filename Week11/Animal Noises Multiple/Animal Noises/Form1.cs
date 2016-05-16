@@ -19,6 +19,7 @@ namespace Animal_Noises
 
         private List<Animal> animalList;
         private List<Thread> threadList;
+        private String threadLock = "threadLock";
       
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,9 +32,9 @@ namespace Animal_Noises
             animalList = new List<Animal>();
             threadList = new List<Thread>();
 
-            animalList.Add(new Animal("frog.wav"));
-            animalList.Add(new Animal("duck.wav"));
-            animalList.Add(new Animal("meow.wav"));
+            animalList.Add(new Animal("frog.wav", threadLock));
+            animalList.Add(new Animal("duck.wav", threadLock));
+            animalList.Add(new Animal("meow.wav", threadLock));
 
             for (int i = 0; i < animalList.Count; i++)
                 threadList.Add(new Thread(animalList[i].speak)); 

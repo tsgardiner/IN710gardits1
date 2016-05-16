@@ -11,15 +11,17 @@ namespace Animal_Noises
     {
         private SoundPlayer soundPlayer;
         private String soundFileName;
+        private String threadLock;
 
-        public Animal(String soundFileName)
+        public Animal(String soundFileName, String threadLock)
         {
             soundPlayer = new SoundPlayer(soundFileName);
+            this.threadLock = threadLock;
         }
 
         public void speak()
         {
-            while (true)
+            lock (threadLock)
             {
                     soundPlayer.Play();
                     Thread.Sleep(500);
