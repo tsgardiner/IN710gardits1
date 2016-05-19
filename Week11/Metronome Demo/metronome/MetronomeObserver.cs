@@ -54,16 +54,36 @@ namespace metronome
     public class Counter : MetronomeObserver
     {
         private NumericUpDown spinBox;
+        private delegate void IncrementSpinBoxCallback(int count);
+        private IncrementSpinBoxCallback incrementSpinBoxCallback;
+        private int count;
 
         public Counter(Metronome metronome, NumericUpDown spinBox)
             : base(metronome)
         {
             this.spinBox = spinBox;
+            count = 0;
         }
 
         public override void onMetronomeEvent(object sender, metronomeEventArgs e)
         {
-                spinBox.Value++;  
+            count++;
+
+            if (spinBox.InvokeRequired)
+            {
+                incrementSpinBoxCallback = SetSpinBox;
+                spinBox.Invoke(incrementSpinBoxCallback, count);
+            }    
+            else
+            {
+                SetSpinBox(count);
+            }
+              
+        }
+
+        public void SetSpinBox(int count)
+        {
+            spinBox.Value = count;
         }
     } // end TCounter
 
@@ -72,6 +92,8 @@ namespace metronome
     public class TimeDisplay : MetronomeObserver
     {
         private ListBox listBox;
+        private delegate void SetDateTimeCallback(DateTime currentTime);
+        private SetDateTimeCallback setDateTimeCallback;
 
         public TimeDisplay(Metronome metronome, ListBox listBox)
             : base(metronome)
@@ -82,7 +104,23 @@ namespace metronome
         public override void onMetronomeEvent(object sender, metronomeEventArgs e)
         {
             DateTime currDateTime = e.currentTime;
-            listBox.Items.Add(currDateTime.ToString());         
+
+            if (listBox.InvokeRequired)
+            {
+                setDateTimeCallback = SetText;
+                listBox.Invoke(setDateTimeCallback, currDateTime);
+            }
+            else
+            {
+                SetText(currDateTime);
+            }
+
+                     
+        }
+
+        private void SetText(DateTime currentTime)
+        {
+            listBox.Items.Add(currentTime.ToString());
         }
     }
 

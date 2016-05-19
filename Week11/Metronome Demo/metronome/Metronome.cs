@@ -54,7 +54,7 @@ namespace metronome
            while (true)
             {
                 System.Threading.Thread.Sleep(interval);
-                mainForm.clearBuffer();
+                mainForm.clearBuffer(); 
                 onMetronomeEvent();
             }
         }

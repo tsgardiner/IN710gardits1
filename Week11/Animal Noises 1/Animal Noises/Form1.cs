@@ -5,12 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Animal_Noises
 {
     public partial class Form1 : Form
     {
+        Thread t;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,12 +28,18 @@ namespace Animal_Noises
 
         private void btnSpeak_Click(object sender, EventArgs e)
         {
-            mainAnimal.speak();
+           t = new Thread(mainAnimal.speak);
+           t.Start();
         }
 
         private void btnWhat_Click(object sender, EventArgs e)
         {
             MessageBox.Show("It is a frog");
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            t.Abort();
         }
 
 
