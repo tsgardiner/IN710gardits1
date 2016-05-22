@@ -1,0 +1,65 @@
+﻿@model DogSelector.Models.Dog
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DogSelector</title>
+</head>
+<body>
+    <div> 
+        <form action="result" method="post">
+            <fieldset>
+
+                <legend>Preferences:</legend>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Low</th>
+                                <th>Medium</th>
+                                <th>High</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>Activity Level</td>
+                            <td><input type="radio" name="activityLevel" value="Low" /></td>
+                            <td><input type="radio" name="activityLevel" value="Medium" /></td>
+                            <td><input type="radio" name="activityLevel" value="High" /></td>
+                            <td><input type="radio" name="activityLevel" value="NoPreference" /></td>                               
+                        </tr>
+                        <tr>
+                            <td>Grooming Level</td>
+                            <td><input type="radio" name="groomingLevel" value="Low" /></td>
+                            <td><input type="radio" name="groomingLevel" value="Medium" /></td>
+                            <td><input type="radio" name="groomingLevel" value="High" /></td>
+                            <td><input type="radio" name="groomingLevel" value="NoPreference" /></td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence Level</td>
+                            <td><input type="radio" name="intelligenceLevel" value="Low" /></td>
+                            <td><input type="radio" name="intelligenceLevel" value="Medium" /></td>
+                            <td><input type="radio" name="intelligenceLevel" value="High" /></td>
+                            <td><input type="radio" name="intelligenceLevel" value="NoPreference" /></td>
+                        </tr>
+                        <tr>
+                            <td>Shedding Level</td>
+                            <td><input type="radio" name="sheddingLevel" value="Low" /></td>
+                            <td><input type="radio" name="sheddingLevel" value="Medium" /></td>
+                            <td><input type="radio" name="sheddingLevel" value="High" /></td>
+                            <td><input type="radio" name="sheddingLevel" value="NoPreference" /></td>
+                        </tr>
+                    </table>
+
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

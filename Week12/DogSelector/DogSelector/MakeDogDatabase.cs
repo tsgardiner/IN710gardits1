@@ -8,15 +8,8 @@ namespace DogSelector
 {
     public class MakeDogDatabase
     {
-
-        public MakeDogDatabase()
-        {
-            
-        }
-
-
         //=========================================================================
-        private List<Dog> makeDatabase()
+        public static List<Dog> makeDatabase()
         {
             List<Dog> newDatabase = new List<Dog>();
 
