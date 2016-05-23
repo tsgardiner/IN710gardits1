@@ -25,7 +25,7 @@ namespace DogSelector.Controllers
 
 
         [HttpPost]
-        public ActionResult RecommendedDog()
+        public ActionResult RecommendedDog(Dog desiredDog)
         {
 
             return View();

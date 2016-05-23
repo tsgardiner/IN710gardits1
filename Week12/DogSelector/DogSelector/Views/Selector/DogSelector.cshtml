@@ -10,56 +10,120 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>DogSelector</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div> 
-        <form action="result" method="post">
-            <fieldset>
+    <div class="container">
+        <div id="background" class="col-md-12 col-lg-12 col-sm-12">   
+            <div id="mainContent" class="col-md-12 col-lg-12 col-sm-12">
 
-                <legend>Preferences:</legend>
+                <form action="RecommendedDog" method="post">
+                    <fieldset>
 
-                    <table>
-                        <thead>
+                        <legend>Preferences:</legend>
+
+                        <p>Good With Children:</p>
+                        <ul>
+                            <li><p>True:  <input type="radio" name="GoodWithChildren" value="true" /></p></li>
+                            <li><p>False:  <input type="radio" name="GoodWithChildren" value="false" /></p> </li>
+                        </ul> 
+
+                        <p>Drools:</p>
+                        <ul>
+                            <li><p>True: <input type="radio" name="Drools" value="true" /></p></li>
+                            <li><p>False: <input type="radio" name="Drools" value="false" /></p></li>
+                        </ul>
+
+                        
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Short</th>
+                                    <th>Medium</th>
+                                    <th>Long</th>
+                                </tr>
+                            </thead>
                             <tr>
-                                <th></th>
-                                <th>Low</th>
-                                <th>Medium</th>
-                                <th>High</th>
+                                <td>Coat Length:</td>
+                                <td><input type="radio" name="CoatLength" value="@ELength.Short" /></td>
+                                <td><input type="radio" name="CoatLength" value="@ELength.Medium" /></td>
+                                <td><input type="radio" name="CoatLength" value="@ELength.Long" /></td>    
                             </tr>
-                        </thead>
-                        <tr>
-                            <td>Activity Level</td>
-                            <td><input type="radio" name="activityLevel" value="Low" /></td>
-                            <td><input type="radio" name="activityLevel" value="Medium" /></td>
-                            <td><input type="radio" name="activityLevel" value="High" /></td>
-                            <td><input type="radio" name="activityLevel" value="NoPreference" /></td>                               
-                        </tr>
-                        <tr>
-                            <td>Grooming Level</td>
-                            <td><input type="radio" name="groomingLevel" value="Low" /></td>
-                            <td><input type="radio" name="groomingLevel" value="Medium" /></td>
-                            <td><input type="radio" name="groomingLevel" value="High" /></td>
-                            <td><input type="radio" name="groomingLevel" value="NoPreference" /></td>
-                        </tr>
-                        <tr>
-                            <td>Intelligence Level</td>
-                            <td><input type="radio" name="intelligenceLevel" value="Low" /></td>
-                            <td><input type="radio" name="intelligenceLevel" value="Medium" /></td>
-                            <td><input type="radio" name="intelligenceLevel" value="High" /></td>
-                            <td><input type="radio" name="intelligenceLevel" value="NoPreference" /></td>
-                        </tr>
-                        <tr>
-                            <td>Shedding Level</td>
-                            <td><input type="radio" name="sheddingLevel" value="Low" /></td>
-                            <td><input type="radio" name="sheddingLevel" value="Medium" /></td>
-                            <td><input type="radio" name="sheddingLevel" value="High" /></td>
-                            <td><input type="radio" name="sheddingLevel" value="NoPreference" /></td>
-                        </tr>
-                    </table>
+                        </table>
 
 
-            </fieldset>
-        </form>
-    </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Low</th>
+                                        <th>Medium</th>
+                                        <th>High</th>
+                                        <th>No Preference</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>Activity Level</td>
+                                    <td><input type="radio" name="ActivityLevel" value="@EScale.Low" /></td>
+                                    <td><input type="radio" name="ActivityLevel" value="@EScale.Medium" /></td>
+                                    <td><input type="radio" name="ActivityLevel" value="@EScale.High" /></td>
+                                    <td><input type="radio" name="ActivityLevel" value="@EScale.NoPreference" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Grooming Level</td>
+                                    <td><input type="radio" name="GroomingLevel" value="@EScale.Low" /></td>
+                                    <td><input type="radio" name="GroomingLevel" value="@EScale.Medium" /></td>
+                                    <td><input type="radio" name="GroomingLevel" value="@EScale.High" /></td>
+                                    <td><input type="radio" name="GroomingLevel" value="@EScale.NoPreference" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Intelligence Level</td>
+                                    <td><input type="radio" name="IntelligenceLevel" value="@EScale.Low" /></td>
+                                    <td><input type="radio" name="IntelligenceLevel" value="@EScale.Medium" /></td>
+                                    <td><input type="radio" name="IntelligenceLevel" value="@EScale.High" /></td>
+                                    <td><input type="radio" name="IntelligenceLevel" value="@EScale.NoPreference" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Shedding Level</td>
+                                    <td><input type="radio" name="SheddingLevel" value="@EScale.Low" /></td>
+                                    <td><input type="radio" name="SheddingLevel" value="@EScale.Medium" /></td>
+                                    <td><input type="radio" name="SheddingLevel" value="@EScale.High" /></td>
+                                    <td><input type="radio" name="SheddingLevel" value="@EScale.NoPreference" /></td>
+                                </tr>
+                            </table>
+
+                            
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Miniature</th>
+                                    <th>Small</th>
+                                    <th>Medium</th>
+                                    <th>Large</th>
+                                    <th>Giant</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>Coat Length:</td>
+                                <td><input type="radio" name="Size" value="@ESize.Miniature" /></td>
+                                <td><input type="radio" name="Size" value="@ESize.Small" /></td>
+                                <td><input type="radio" name="Size" value="@ESize.Medium" /></td>
+                                <td><input type="radio" name="Size" value="@ESize.Large" /></td>
+                                <td><input type="radio" name="Size" value="@ESize.Giant" /></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <p><input type="submit" value="Find Ideal Dog" /></p>
+                </form>
+            </div>
+         </div>
+     </div>
 </body>
 </html>

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace DogSelector
 {
-    public enum EScale { Low, Medium, High }
+    public enum EScale { NoPreference, Low, Medium, High }
 
     public enum ELength { Short, Medium, Long }
 
