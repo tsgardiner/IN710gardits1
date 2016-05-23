@@ -82,6 +82,21 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DogImages\AfghanHound.jpg" />
+    <Content Include="Content\DogImages\BassetHound.jpg" />
+    <Content Include="Content\DogImages\Beagle.jpg" />
+    <Content Include="Content\DogImages\BichonFrise.jpg" />
+    <Content Include="Content\DogImages\Borzoi.jpg" />
+    <Content Include="Content\DogImages\Bulldog.jpg" />
+    <Content Include="Content\DogImages\CavalierKingCharlesSpaniel.jpg" />
+    <Content Include="Content\DogImages\ChowChow.jpg" />
+    <Content Include="Content\DogImages\Dalmation.jpg" />
+    <Content Include="Content\DogImages\GoldenRetriever.jpg" />
+    <Content Include="Content\DogImages\Maltese.jpg" />
+    <Content Include="Content\DogImages\Newfoundland.jpg" />
+    <Content Include="Content\DogImages\OldEnglishSheepdog.jpg" />
+    <Content Include="Content\DogImages\Pug.jpg" />
+    <Content Include="Content\DogImages\WestHighlandWhiteTerrier.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -96,6 +111,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\SelectorController.cs" />
+    <Compile Include="DogMatcher.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

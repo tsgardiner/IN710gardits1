@@ -28,7 +28,9 @@ namespace DogSelector.Controllers
         public ActionResult RecommendedDog(Dog desiredDog)
         {
 
-            return View();
+            Dog closestMatch = DogMatcher.CompareDogs(desiredDog, allDogs);
+
+            return View(closestMatch);
         }
     }
 }

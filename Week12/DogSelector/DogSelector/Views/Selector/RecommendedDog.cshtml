@@ -12,8 +12,23 @@
     <title>RecommendedDog</title>
 </head>
 <body>
-    <div> 
+    <div class="container">
+        <div id="background" class="col-md-12 col-lg-12 col-sm-12">
+            <img src="~/Content/DogImages/@Model.ImageName" alt="Alternate Text" />
 
+            <p>The closest match was a @Model.DisplayName</p> 
+            <p>Closest Match Attributes:</p>
+            <p>Activity Level: @Model.ActivityLevel</p>
+            <p>Coat Length: @Model.CoatLength</p>
+            <p>Grooming Level: @Model.GroomingLevel</p>
+            <p>Intelligence Level: @Model.IntelligenceLevel</p>
+            <p>Shedding Level: @Model.SheddingLevel</p>
+            <p>Size: @Model.Size</p>
+            <p>Drools: @Model.Drools</p>
+            <p>Good with children: @Model.GoodWithChildren</p>
+            
+
+        </div>
 
     </div>
 </body>
